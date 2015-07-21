@@ -122,10 +122,10 @@ The initialisation happens using the `MaterialDrawableBuilder`, which you can us
 ```java
 // The method returns a MaterialDrawable, but as it is private to the builder you'll have to store it as a regular Drawable ;)
 Drawable yourDrawable = MaterialDrawableBuilder.with(context) // provide a context
-                                    .setIcon(MaterialDrawableBuilder.IconValue.WEATHER_RAINY) // provide an icon
-                                    .setColor(Color.WHITE) // set the icon color
-                                    .setToActionbarSize() // set the icon size
-                                .build(); // Finally call build
+        .setIcon(MaterialDrawableBuilder.IconValue.WEATHER_RAINY) // provide an icon
+        .setColor(Color.WHITE) // set the icon color
+        .setToActionbarSize() // set the icon size
+    .build(); // Finally call build
 ```
 
 This will throw an `IconNotSetException` if you forget to provide an icon.
