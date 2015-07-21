@@ -1,4 +1,4 @@
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -12,7 +12,7 @@
         app:materialIcon="clipboard_arrow_down"
         android:background="@android:color/darker_gray"
         android:textColor="#fff"
-        android:textSize="24dp"
+        android:padding="12dp"
         android:gravity="center"
         android:id="@+id/icon"
         />
@@ -30,8 +30,10 @@
         android:layout_width="104dp"
         android:layout_height="104dp"
         app:materialIcon="settings"
+        app:materialIconSize="48dp"
+        android:scaleType="center"
         android:textColor="#333"
-        android:textSize="48dp"
+
         android:gravity="center"
         android:background="#33EE2222"
         android:layout_toRightOf="@id/icon"
@@ -39,36 +41,16 @@
         android:id="@+id/icon_1"
         android:layout_marginBottom="8dp"
         />
-    <net.steamcrafted.materialiconlib.MaterialIconView
-        android:layout_width="192dp"
-        android:layout_height="192dp"
-        app:materialIcon="console"
-        android:textColor="#333"
-        android:textSize="96dp"
-        android:background="#3322EE22"
-        android:gravity="center"
-        android:layout_below="@id/icon_1"
-        android:id="@+id/icon_2"
-        />
 
     <net.steamcrafted.materialiconlib.MaterialIconView
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:padding="20dp"
-        app:materialIcon="flash"
-        app:materialIconColor="#AA0000"
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        app:materialIcon="settings"
+        app:materialIconColor="#F60000"
+        app:materialIconSize="150dp"
+        android:scaleType="center"
         android:layout_centerInParent="true"
         />
 
-</RelativeLayout>-->
-
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/listview"
-    android:numColumns="5"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"/>
+</RelativeLayout>

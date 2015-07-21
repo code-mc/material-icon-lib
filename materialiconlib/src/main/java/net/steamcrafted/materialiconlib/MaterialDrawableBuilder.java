@@ -28,7 +28,7 @@ public class MaterialDrawableBuilder {
 
     private final Context context;
 
-    private IconValue icon;
+    private IconValue icon = null;
 
     private TextPaint paint;
 
@@ -36,9 +36,9 @@ public class MaterialDrawableBuilder {
 
     private int alpha = 255;
 
-    private MaterialDrawable mDrawable;
-
     private final Rect bounds = new Rect();
+
+    private MaterialDrawable mCachedDrawable;
 
     /**
      * Create an IconDrawable.
@@ -55,16 +55,31 @@ public class MaterialDrawableBuilder {
         paint.setUnderlineText(false);
         paint.setColor(Color.BLACK);
         paint.setAntiAlias(true);
+
+        setToActionbarSize();
+        setColor(Color.BLACK);
     }
 
     public static MaterialDrawableBuilder with(Context context){
         return new MaterialDrawableBuilder(context);
     }
 
-    public MaterialDrawable build(){
+    public MaterialDrawable build() throws IconNotSetException{
+        if(icon == null){
+            throw new IconNotSetException();
+        }
         return new MaterialDrawable(context, icon, paint, size, alpha);
     }
-
+/*
+    public MaterialDrawable buildFromCache() throws IconNotSetException{
+        if(icon == null){
+            throw new IconNotSetException();
+        }
+        if(mCachedDrawable == null) return build();
+        mCachedDrawable.setIcon(icon).setTextPaint(paint).setSizePx(size).setAlpha(alpha);
+        return mCachedDrawable;
+    }
+*/
     public MaterialDrawableBuilder setIcon(IconValue iconValue){
         icon = iconValue;
         return this;
@@ -119,6 +134,9 @@ public class MaterialDrawableBuilder {
      */
     public MaterialDrawableBuilder setColor(int color) {
         paint.setColor(color);
+        if(Color.alpha(color) != 255){
+            paint.setAlpha(Color.alpha(color));
+        }
         return this;
     }
 
@@ -129,7 +147,7 @@ public class MaterialDrawableBuilder {
      * @return The current IconDrawable for chaining.
      */
     public MaterialDrawableBuilder setColorResource(int colorRes) {
-        paint.setColor(context.getResources().getColor(colorRes));
+        setColor(context.getResources().getColor(colorRes));
         return this;
     }
 
@@ -163,9 +181,30 @@ public class MaterialDrawableBuilder {
         return this;
     }
 
+    private class IconNotSetException extends RuntimeException {
+        public IconNotSetException() {
+            this("No icon provided when building MaterialDrawable.");
+        }
+
+        public IconNotSetException(String message)
+        {
+            super(message);
+        }
+
+        public IconNotSetException(Throwable cause)
+        {
+            super(cause);
+        }
+
+        public IconNotSetException(String message, Throwable cause)
+        {
+            super(message, cause);
+        }
+    }
+
     private class MaterialDrawable extends Drawable {
         private final Context context;
-        private final IconValue icon;
+        private IconValue icon;
         private TextPaint paint;
         private int size = -1;
         private int alpha = 255;
@@ -199,6 +238,19 @@ public class MaterialDrawableBuilder {
             return this;
         }
 
+        /*
+        public MaterialDrawable setIcon(IconValue iconin){
+            this.icon = iconin;
+            invalidateSelf();
+            return this;
+        }
+
+        public MaterialDrawable setTextPaint(TextPaint p){
+            this.paint = p;
+            invalidateSelf();
+            return this;
+        }*/
+
         @Override
         public int getIntrinsicHeight() {
             return size;
@@ -209,13 +261,13 @@ public class MaterialDrawableBuilder {
             return size;
         }
 
+        private final Rect mCachedRect = new Rect();
         @Override
         public void draw(Canvas canvas) {
             paint.setTextSize(getBounds().height());
-            Rect textBounds = new Rect();
-            String textValue = MaterialIconView.getIconString(icon.ordinal());
-            paint.getTextBounds(textValue, 0, 1, textBounds);
-            float textBottom = (getBounds().height() - textBounds.height()) / 2f + textBounds.height() - textBounds.bottom;
+            String textValue = MaterialIconUtils.getIconString(icon.ordinal());
+            paint.getTextBounds(textValue, 0, 1, mCachedRect);
+            float textBottom = (getBounds().height() - mCachedRect.height()) / 2f + mCachedRect.height() - mCachedRect.bottom;
             canvas.drawText(textValue, getBounds().width() / 2f, textBottom, paint);
         }
 

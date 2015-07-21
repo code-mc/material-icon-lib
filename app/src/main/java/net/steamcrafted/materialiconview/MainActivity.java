@@ -5,52 +5,44 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 import net.steamcrafted.materialiconlib.MaterialIconView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     MaterialIconView mIcon;
+    GridView mListview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mIcon = (MaterialIconView) findViewById(R.id.icon);
+        mListview = (GridView) findViewById(R.id.listview);
+        List<MaterialDrawableBuilder.IconValue> vals = Arrays.asList(MaterialDrawableBuilder.IconValue.values());
+
+        ImageAdapter adapt = new ImageAdapter(vals);
+        mListview.setAdapter(adapt);
+
+        /*mIcon = (MaterialIconView) findViewById(R.id.icon);
         ImageView imgicon = (ImageView) findViewById(R.id.image_icon);
 
-        mIcon.setIcon(MaterialDrawableBuilder.IconValue.AIRBALLOON);
+        mIcon.setIcon(MaterialDrawableBuilder.IconValue.CONTENT_COPY);
         imgicon.setImageDrawable(
                 MaterialDrawableBuilder.with(this)
-                    .setIcon(MaterialDrawableBuilder.IconValue.WEATHER_RAINY)
-                    .setColor(Color.WHITE)
-                    .setToActionbarSize()
-                .build()
+                        .setColor(Color.WHITE)
+                        .setToActionbarSize()
+                        .setIcon(MaterialDrawableBuilder.IconValue.AMAZON_CLOUDDRIVE)
+                        .build()
         );
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        */
     }
 }

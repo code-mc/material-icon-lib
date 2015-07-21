@@ -29,4 +29,8 @@ public class MaterialIconUtils {
         return (int) applyDimension(COMPLEX_UNIT_DIP, dp,
                     context.getResources().getDisplayMetrics());
     }
+
+    public static String getIconString(int iconIndex){
+        return new String(Character.toChars(0xF101 + iconIndex));
+    }
 }

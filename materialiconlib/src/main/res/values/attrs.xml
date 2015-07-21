@@ -1,5 +1,9 @@
 <resources>
     <declare-styleable name="MaterialIconViewFormat">
+        <attr name="materialIconSize" format="dimension"/>
+
+        <attr name="materialIconColor" format="color"/>
+
         <attr name="materialIcon" format="integer">
             <enum name="account" value="0"/>
             <enum name="account_alert" value="1"/>
