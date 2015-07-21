@@ -8,7 +8,7 @@ A library containing over 1000 material vector icons that can be easily used as 
 
 # Stats
 
- - LIVE previews and code completion in the Android Studio Designer (See above preview)
+ - LIVE previews and code completion in the Android Studio Designer (Does NOT work out of the box, see step 0 below!)
  - Currently contains 1170 icons
  - Configured in less than a minute
  - Adds about 200kb to your apk (so a wopping average of __170 bytes per icon__)
