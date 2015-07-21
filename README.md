@@ -19,7 +19,7 @@ A library containing over 1000 material vector icons that can be easily used as 
 
 Now I still have your attention, to get the previews to work in Android Studio you'll have to put the font file inside the assets of your project yourself. Due to a bug it does not think about looking inside the library's assets for some odd reason.
 
-Get the font file [__here__](https://raw.githubusercontent.com/code-mc/material-icon-lib/blob/master/materialiconlib/src/main/assets/materialdesignicons-webfont.ttf).
+Get the font file [__here__](https://github.com/code-mc/material-icon-lib/blob/master/materialiconlib/src/main/assets/materialdesignicons-webfont.ttf?raw=true).
 
 ## Step 1
 
