@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "net.steamcrafted.materialiconview"
-        minSdkVersion 4
+        minSdkVersion 7
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -23,5 +23,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'net.steamcrafted:materialiconlib:1.0.2'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'net.steamcrafted:materialiconlib:1.0.3'
 }
