@@ -8,6 +8,7 @@ A library containing over 1000 material vector icons that can be easily used as 
 
 # Stats
 
+ - MinSdk 4
  - LIVE previews and code completion in the Android Studio Designer (Does NOT work out of the box, see step 0 below!)
  - Currently contains 1170 icons
  - Configured in less than a minute
@@ -130,7 +131,7 @@ Drawable yourDrawable = MaterialDrawableBuilder.with(context) // provide a conte
 
 This will throw an `IconNotSetException` if you forget to provide an icon.
 
-Once you call build your Drawable will be spit out and you are ready to use it everywhere you please! Setting it to a view is just as easy as with any other `Drawable` (e.g. for `ImageView`):
+Once you call build, your Drawable will be spit out and you are ready to use it everywhere you please! Setting it to a view is just as easy as with any other `Drawable` (e.g. for `ImageView`):
 
 ```java
 yourImageView.setImageDrawable(yourDrawable);
