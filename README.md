@@ -22,6 +22,8 @@ Now I still have your attention, to get the previews to work in Android Studio y
 
 Get the font file [__here__](https://github.com/code-mc/material-icon-lib/blob/master/materialiconlib/src/main/assets/materialdesignicons-webfont.ttf?raw=true).
 
+You don't have to worry about android including the file twice in your apk. Android Studio recognizes the duplicate file name and only keeps one copy in your apk!
+
 ## Step 1
 
 #### Gradle
