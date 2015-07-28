@@ -185,3 +185,6 @@ builder.setStyle(Paint.Style style);
 #License
 
 Released under the [Apache 2.0 License](https://github.com/code-mc/material-icon-lib/blob/master/license.md)
+
+* __MaterialDesignicons__ Released under the [SIL Open Font License 1.1](http://opensource.org/licenses/OFL-1.1)
+* __Google Material Design Icons__ Released under the [Attribution 4.0 International License](https://github.com/google/material-design-icons/blob/master/LICENSE)
