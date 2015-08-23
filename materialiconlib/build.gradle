@@ -4,7 +4,7 @@ apply plugin: 'com.android.library'
 ext {
     PUBLISH_GROUP_ID = 'net.steamcrafted'
     PUBLISH_ARTIFACT_ID = 'materialiconlib'
-    PUBLISH_VERSION = '1.0.3'
+    PUBLISH_VERSION = '1.0.4'
 }
 
 android {

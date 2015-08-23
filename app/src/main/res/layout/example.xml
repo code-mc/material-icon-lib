@@ -29,7 +29,7 @@
     <net.steamcrafted.materialiconlib.MaterialIconView
         android:layout_width="104dp"
         android:layout_height="104dp"
-        app:materialIcon="settings"
+        app:materialIcon="emoticon_devil"
         app:materialIconSize="48dp"
         android:scaleType="center"
         android:textColor="#333"

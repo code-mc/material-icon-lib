@@ -4,7 +4,7 @@ def dumpSvg():
 			write = ""
 			content = f.read()
 			parsed = []
-			for i in content.split('glyph-name="'):
+			for i in content.split('glyph-name="')[1:]:
 				try:
 					write += i.split('unicode="')[0].split('"')[0] + "\t"
 					write += i.split('unicode="')[1][0:8] + "\n"
@@ -13,7 +13,7 @@ def dumpSvg():
 			o.write(write)
 			
 def writeXml():
-	with open("enum.txt", "r+") as f:
+	with open("out.txt", "r+") as f:
 		content = f.read()
 		parsed = """<?xml version="1.0" encoding="utf-8"?>
 <resources>
@@ -31,7 +31,7 @@ def writeXml():
 				enum = i.split("\t")
 				name = enum[0]
 				hexcode = enum[1]
-				write += """\t\t\t<enum name="{0}" value="{1}"/>\n""".format(name, str(index))
+				write += """\t\t\t<enum name="{0}" value="{1}"/>\n""".format(name.replace("-","_"), str(index))
 				arr.append(name)
 				arrhex.append(hexcode)
 			except:
@@ -45,4 +45,5 @@ def writeXml():
 		with open("enumjavaenum.java", "w+") as j:
 			j.write('{' + ','.join(arr).replace("-","_").upper() + '};')
 
+dumpSvg()
 writeXml()

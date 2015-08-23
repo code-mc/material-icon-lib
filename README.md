@@ -10,7 +10,7 @@ A library containing over 1000 material vector icons that can be easily used as 
 
  - MinSdk 4
  - LIVE previews and code completion in the Android Studio Designer (Does NOT work out of the box, see step 0 below!)
- - Currently contains 1170 icons, you can look at them here: https://materialdesignicons.com
+ - Currently contains 1265 icons, you can look at them here: https://materialdesignicons.com
  - Configured in less than a minute
  - Adds about 200kb to your apk (so a wopping average of __170 bytes per icon__)
 
@@ -30,7 +30,7 @@ You don't have to worry about android including the file twice in your apk. Andr
 
 ```groovy
 dependencies {
-    compile 'net.steamcrafted:materialiconlib:1.0.3'
+    compile 'net.steamcrafted:materialiconlib:1.0.4'
 }
 ```
 
