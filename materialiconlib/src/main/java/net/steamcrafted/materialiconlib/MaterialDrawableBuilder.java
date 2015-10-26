@@ -7,6 +7,10 @@ import android.content.Context;
 import android.graphics.*;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
+import android.util.Log;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Embed an icon into a Drawable that can be used as TextView icons, or ActionBar icons.
@@ -38,8 +42,6 @@ public class MaterialDrawableBuilder {
 
     private final Rect bounds = new Rect();
 
-    private MaterialDrawable mCachedDrawable;
-
     /**
      * Create an IconDrawable.
      *
@@ -70,16 +72,7 @@ public class MaterialDrawableBuilder {
         }
         return new MaterialDrawable(context, icon, paint, size, alpha);
     }
-/*
-    public MaterialDrawable buildFromCache() throws IconNotSetException{
-        if(icon == null){
-            throw new IconNotSetException();
-        }
-        if(mCachedDrawable == null) return build();
-        mCachedDrawable.setIcon(icon).setTextPaint(paint).setSizePx(size).setAlpha(alpha);
-        return mCachedDrawable;
-    }
-*/
+
     public MaterialDrawableBuilder setIcon(IconValue iconValue){
         icon = iconValue;
         return this;

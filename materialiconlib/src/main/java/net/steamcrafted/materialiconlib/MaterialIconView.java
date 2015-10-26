@@ -8,6 +8,7 @@ import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.ImageView;
 
 /**
@@ -201,7 +202,7 @@ public class MaterialIconView extends ImageView {
 
         int scaledWidth = getMeasuredWidth();
         int scaledHeight = getMeasuredHeight();
-        int scaleddimen = Math.min(scaledHeight, scaledWidth);
+        int scaleddimen = (mOverruledSize >= 0) ? mOverruledSize : Math.min(scaledHeight, scaledWidth);
 
         boolean redraw = false;
         if(mDrawable == null){
@@ -227,85 +228,3 @@ public class MaterialIconView extends ImageView {
 
 
 }
-
-/*
-
-public class MaterialIconView extends TextView {
-    private Rect bounds = new Rect();
-
-    public MaterialIconView(Context context) {
-        super(context);
-
-        init();
-    }
-
-    public MaterialIconView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-
-        init(context, attrs);
-    }
-
-    public MaterialIconView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-
-        init(context, attrs);
-    }
-
-    private void init(){
-        setTypeface(MaterialIconUtils.getTypeFace(getContext()));
-        setPadding(0,0,0,0);
-    }
-
-
-    private void init(Context context, AttributeSet attrs){
-        init();
-
-        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.MaterialIconViewFormat);
-        try {
-            int type = array.getInt(R.styleable.MaterialIconViewFormat_materialIcon, 0);
-
-            if(type >= 0) setIcon(type);
-        } finally {
-            array.recycle();
-        }
-    }
-
-    private void setIcon(int iconIndex){
-        setText(MaterialIconUtils.getIconString(iconIndex));
-        invalidate();
-    }
-
-    public void setIcon(MaterialDrawableBuilder.IconValue iconValue){
-        setText(MaterialIconUtils.getIconString(iconValue.ordinal()));
-        invalidate();
-    }
-
-    @Override
-    public void onDraw(Canvas canvas){
-        final CharSequence text = getText();
-
-        TextPaint textPaint = getPaint();
-        if(isInEditMode()){
-            super.onDraw(canvas);
-            return;
-        }
-
-        textPaint.setColor(getCurrentTextColor());
-        textPaint.getTextBounds(text.toString(), 0, text.length(), bounds);
-
-        int availWidth = canvas.getWidth();// - getTotalPaddingLeft() - getTotalPaddingRight();
-        int availHeight = canvas.getHeight();// - getTotalPaddingTop() - getTotalPaddingBottom();
-
-        int xPos = (availWidth - bounds.width()) / 2;
-        int yPos = (availHeight - bounds.height()) / 2;
-        int xOffset = xPos - bounds.left;
-        int yOffset = yPos - bounds.top;
-
-        bounds.offsetTo(xPos, yPos);
-
-        canvas.drawText(text.toString(), xOffset, yOffset, textPaint);
-
-        setText(text);
-    }
-}
-*/

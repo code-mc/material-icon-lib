@@ -2,9 +2,12 @@ package net.steamcrafted.materialiconview;
 
 import android.graphics.Color;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 import net.steamcrafted.materialiconlib.MaterialIconUtils;
@@ -41,13 +44,17 @@ public class ImageAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         if(view == null){
-            view = new MaterialIconView(viewGroup.getContext());
-            view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            view = new ImageView(viewGroup.getContext());
+            view.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.WRAP_CONTENT, AbsListView.LayoutParams.WRAP_CONTENT));
         }
-        MaterialIconView v = (MaterialIconView) view;
-        v.setIcon(icons.get(i));
-        v.setSizePx(viewGroup.getWidth()/5);
-        v.setColor(Color.BLACK);
+        ImageView v = (ImageView) view;
+        v.setImageDrawable(
+                MaterialDrawableBuilder.with(viewGroup.getContext())
+                    .setIcon(icons.get(i))
+                    .setColor(Color.BLACK)
+                    .setSizePx(viewGroup.getWidth() / 5)
+                    .build()
+        );
         return v;
     }
 }

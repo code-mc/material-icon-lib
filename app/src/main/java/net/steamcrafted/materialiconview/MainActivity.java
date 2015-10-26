@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         ImageAdapter adapt = new ImageAdapter(vals);
         mListview.setAdapter(adapt);
 
+
+
         /*mIcon = (MaterialIconView) findViewById(R.id.icon);
         ImageView imgicon = (ImageView) findViewById(R.id.image_icon);
 
