@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MainActivity extends AppCompatActivity {
 
     MaterialIconView mIcon;
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
 
         mListview = (GridView) findViewById(R.id.listview);
@@ -32,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
         ImageAdapter adapt = new ImageAdapter(vals);
         mListview.setAdapter(adapt);
 
+
+        /*
+        setContentView(R.layout.circletest);
+        ((CircleImageView)findViewById(R.id.profile_image)).setImageDrawable(
+                MaterialDrawableBuilder.with(this)
+                        .setSizeDp(96)
+                        .setIcon(MaterialDrawableBuilder.IconValue.FACEBOOK_BOX)
+                        .setColor(Color.BLUE)
+                        .build()
+        );
+        */
 
 
         /*mIcon = (MaterialIconView) findViewById(R.id.icon);
