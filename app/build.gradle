@@ -19,6 +19,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -26,5 +32,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'de.hdodenhof:circleimageview:2.0.0'
     /*compile project(':materialiconlib')*/
-    compile 'net.steamcrafted:materialiconlib:1.0.8'
+    compile project(":materialiconlib")
 }

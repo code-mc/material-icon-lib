@@ -30,7 +30,7 @@ You don't have to worry about android including the file twice in your apk. Andr
 
 ```groovy
 dependencies {
-    compile 'net.steamcrafted:materialiconlib:1.0.8'
+    compile 'net.steamcrafted:materialiconlib:1.0.9'
 }
 ```
 

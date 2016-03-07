@@ -128,9 +128,7 @@ public class MaterialDrawableBuilder {
      */
     public MaterialDrawableBuilder setColor(int color) {
         paint.setColor(color);
-        if(Color.alpha(color) != 255){
-            paint.setAlpha(Color.alpha(color));
-        }
+        setAlpha(Color.alpha(color));
         return this;
     }
 
@@ -262,6 +260,7 @@ public class MaterialDrawableBuilder {
             String textValue = MaterialIconUtils.getIconString(icon.ordinal());
             paint.getTextBounds(textValue, 0, 1, mCachedRect);
             float textBottom = (getBounds().height() - mCachedRect.height()) / 2f + mCachedRect.height() - mCachedRect.bottom;
+
             canvas.drawText(textValue, getBounds().width() / 2f, textBottom, paint);
         }
 
