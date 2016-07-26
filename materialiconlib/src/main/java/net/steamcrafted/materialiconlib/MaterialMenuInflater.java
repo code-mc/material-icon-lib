@@ -74,7 +74,7 @@ public class MaterialMenuInflater {
      * {@link InflateException} if there is an error.
      *
      * @param menuRes Resource ID for an XML layout resource to load (e.g.,
-     *            <code>R.menu.main_activity)
+     *            <code>R.menu.main_activity)</code>)
      * @param menu The Menu to inflate into. The items and submenus will be
      *            added to this Menu.
      */

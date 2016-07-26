@@ -112,8 +112,6 @@ public class MaterialIconView extends ImageView {
 
     /**
      * Set the size of this icon to the standard Android ActionBar.
-     *
-     * @return The current IconDrawable for chaining.
      */
     public void setToActionbarSize() {
         setSizeDp(ACTIONBAR_HEIGHT_DP);
@@ -123,7 +121,6 @@ public class MaterialIconView extends ImageView {
      * Set the size of the drawable.
      *
      * @param dimenRes The dimension resource.
-     * @return The current IconDrawable for chaining.
      */
     public void setSizeResource(int dimenRes) {
         mBuilder.setSizeResource(dimenRes);
@@ -135,7 +132,6 @@ public class MaterialIconView extends ImageView {
      * Set the size of the drawable.
      *
      * @param size The size in density-independent pixels (dp).
-     * @return The current IconDrawable for chaining.
      */
     public void setSizeDp(int size) {
         mBuilder.setSizeDp(size);
@@ -147,7 +143,6 @@ public class MaterialIconView extends ImageView {
      * Set the size of the drawable.
      *
      * @param size The size in pixels (px).
-     * @return The current IconDrawable for chaining.
      */
     public void setSizePx(int size) {
         mBuilder.setSizePx(size);
@@ -159,7 +154,6 @@ public class MaterialIconView extends ImageView {
      * Set the color of the drawable.
      *
      * @param color The color, usually from android.graphics.Color or 0xFF012345.
-     * @return The current IconDrawable for chaining.
      */
     public void setColor(int color) {
         mBuilder.setColor(color);
@@ -170,7 +164,6 @@ public class MaterialIconView extends ImageView {
      * Set the color of the drawable.
      *
      * @param colorRes The color resource, from your R file.
-     * @return The current IconDrawable for chaining.
      */
     public void setColorResource(int colorRes) {
         mBuilder.setColorResource(colorRes);

@@ -16,7 +16,7 @@ import android.text.TextPaint;
  * Builder used to create a MaterialDrawable. Provide a context and at least an icon to build.
  *
  * Example usage:
- * <p/>
+ * <p></p>
  * <pre>
  *     Drawable myDrawable = MaterialDrawableBuilder.with(context)
  *              .setIcon(IconValue.ACCESS_POINT)
