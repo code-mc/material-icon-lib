@@ -4,13 +4,13 @@ package net.steamcrafted.materialiconlib;
  * Created by Wannes2 on 19/07/2015.
  */
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
-import android.util.Log;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Builder used to create a MaterialDrawable. Provide a context and at least an icon to build.
@@ -71,7 +71,7 @@ public class MaterialDrawableBuilder {
         if(icon == null){
             throw new IconNotSetException();
         }
-        return new MaterialDrawable(context, icon, paint, size, alpha);
+        return new MaterialDrawable(icon, paint, size, alpha);
     }
 
     public MaterialDrawableBuilder setIcon(IconValue iconValue){
@@ -195,7 +195,6 @@ public class MaterialDrawableBuilder {
     }
 
     private class MaterialDrawable extends Drawable {
-        private final Context context;
         private IconValue icon;
         private TextPaint paint;
         private int size = -1;
@@ -207,8 +206,7 @@ public class MaterialDrawableBuilder {
          * @param context Your activity or application context.
          * @param icon    The icon you want this drawable to display.
          */
-        public MaterialDrawable(Context context, IconValue icon, TextPaint paint, int size, int alpha) {
-            this.context = context;
+        public MaterialDrawable(IconValue icon, TextPaint paint, int size, int alpha) {
             this.icon = icon;
             this.paint = paint;
             this.setSizePx(size);

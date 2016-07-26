@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+    <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_0_box" app:materialIconColor="#33000000"/>
+    <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_1_box"/>
+    <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_2_box"/>
+    <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_3_box"/>
+
+    <item app:showAsAction="always" app:materialIcon="dots_vertical" android:title="But wait...">
+        <menu>
+            <item app:showAsAction="always" android:title="This" app:materialIcon="youtube_play"/>
+            <item app:showAsAction="always" android:title="material" app:materialIcon="apple"/>
+            <item app:showAsAction="always" android:title="menu" app:materialIcon="microsoft"/>
+            <item app:showAsAction="always" android:title="thing" app:materialIcon="android"/>
+            <item app:showAsAction="always" android:title="is" app:materialIcon="apple_ios"/>
+            <item app:showAsAction="always" android:title="pretty" app:materialIcon="amazon"/>
+            <item app:showAsAction="always" android:title="amazing" app:materialIcon="facebook"/>
+            <item app:showAsAction="always" android:title="!" app:materialIcon="github_circle"/>
+        </menu>
+    </item>
+
+</menu>

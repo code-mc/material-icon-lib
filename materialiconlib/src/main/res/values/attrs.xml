@@ -1,4 +1,7 @@
 <resources>
+    <declare-styleable name="MaterialMenuGroup"><attr name="android:menuCategory"/><attr name="android:orderInCategory"/></declare-styleable>
+    <declare-styleable name="MaterialMenuItem"><attr name="android:menuCategory"/><attr name="android:orderInCategory"/></declare-styleable>
+
     <declare-styleable name="MaterialIconViewFormat">
         <attr name="materialIconSize" format="dimension"/>
 

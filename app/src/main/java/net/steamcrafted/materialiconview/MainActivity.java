@@ -1,22 +1,19 @@
 package net.steamcrafted.materialiconview;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.SupportMenuInflater;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.ListView;
 
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 import net.steamcrafted.materialiconlib.MaterialIconView;
+import net.steamcrafted.materialiconlib.MaterialMenuInflater;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +32,29 @@ public class MainActivity extends AppCompatActivity {
 
         ImageAdapter adapt = new ImageAdapter(vals);
         mListview.setAdapter(adapt);
+
+        final Toolbar toolbar1 = (Toolbar) findViewById(R.id.toolbar_1);
+        MaterialMenuInflater.with(toolbar1.getContext(), new SupportMenuInflater(toolbar1.getContext()))
+                .inflate(R.menu.menu_nocolor, toolbar1.getMenu());
+
+        Toolbar toolbar2 = (Toolbar) findViewById(R.id.toolbar_2);
+        MaterialMenuInflater.with(this)
+                .inflate(R.menu.menu_nocolor, toolbar2.getMenu());
+
+        Toolbar toolbar3 = (Toolbar) findViewById(R.id.toolbar_3);
+        MaterialMenuInflater.with(this)
+                .inflate(R.menu.menu_nocolor, toolbar3.getMenu());
+
+
+        // Activity Theme materialIconColor attribute (lowest priority default color)
+        // View specific Theme e.g. app:theme="..."   (2nd lowest in priority)
+        // setDefaultColor(Resource) methods (highest priority default color)
+        // app:materialIconColor set on an <item> tag in the menu XML file (overrides any other color choice)
+
+        MaterialMenuInflater
+                .with(this)
+                .setDefaultColor(Color.BLUE)
+                .inflate(R.menu.menu_nocolor, toolbar1.getMenu());
 
 
         /*
@@ -62,4 +82,12 @@ public class MainActivity extends AppCompatActivity {
         );
         */
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MaterialMenuInflater.with(this).inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+
 }

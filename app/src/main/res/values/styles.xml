@@ -1,8 +1,16 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
+        <item name="materialIconColor">#af09b9</item>
     </style>
 
+    <!-- Base application theme. -->
+    <style name="ToolbarTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="materialIconColor">@color/somecolor</item>
+    </style>
+
+    <color name="somecolor">#00a</color>
 </resources>

@@ -3,8 +3,6 @@ package net.steamcrafted.materialiconlib;
 import android.content.Context;
 import android.graphics.Typeface;
 
-import java.io.File;
-
 import static android.util.TypedValue.COMPLEX_UNIT_DIP;
 import static android.util.TypedValue.applyDimension;
 
@@ -14,7 +12,6 @@ import static android.util.TypedValue.applyDimension;
 public class MaterialIconUtils {
     private static final String mFontPath = "materialdesignicons-webfont.ttf";
     private static Typeface materialFont;
-    private static Typeface materialFontEdit;
 
     private MaterialIconUtils() {
         // Prevents instantiation
@@ -32,5 +29,13 @@ public class MaterialIconUtils {
 
     public static String getIconString(int iconIndex){
         return new String(Character.toChars(0xF101 + iconIndex));
+    }
+
+    public static int getColorResource(Context context, int colorResource){
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            return context.getResources().getColor(colorResource, context.getTheme());
+        }else{
+            return context.getResources().getColor(colorResource);
+        }
     }
 }
