@@ -39,7 +39,7 @@ dependencies {
 
 ## Step 2
 
-There's a total of 3 different use cases. You can use the provided [`MaterialIconView`](#MaterialIconView) which mostly is just a more advanced `ImageView` or use your preferred `ImageView` and use the [`MaterialDrawable`](#MaterialDrawable) as Drawable resource. If you want to spice up your `Toolbar` with icons from this library there is a custom [`MaterialMenuInflater`](#MaterialMenuInflater) that does just that in a single line of code.
+There's a total of 3 different use cases (click the links to jump to their section). You can use the provided [`MaterialIconView`](#materialiconview) which mostly is just a more advanced `ImageView` or use your preferred `ImageView` and use the [`MaterialDrawable`](#materialdrawable) as Drawable resource. If you want to spice up your `Toolbar` with icons from this library there is a custom [`MaterialMenuInflater`](#materialmenuinflater) that does just that in a single line of code.
 
 ### MaterialIconView
 
