@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" >
-    <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_0_box" app:materialIconColor="#FE0000"/>
+    <item app:showAsAction="always" android:title="a" app:materialIcon="wifi_off" app:materialIconColor="#FE0000"/>
     <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_1_box" app:materialIconColor="#FF9C00"/>
     <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_2_box" app:materialIconColor="#F5FF00"/>
     <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_3_box" app:materialIconColor="#3CF10E"/>

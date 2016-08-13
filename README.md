@@ -1,6 +1,6 @@
 # Material Icon Library
 
-A library containing over 1000 material vector icons that can be easily used as Drawable or as a standalone View. Tired of having to search for and generate png resources every time you want to test something? This library puts an end to that burden and makes swapping icons a breeze, check out the usage below and you'll see why.
+A library containing over 1000 material vector icons that can be easily used as Drawable, a standalone View or inside menu resource files. Tired of having to search for and generate png resources every time you want to test something? This library puts an end to that burden and makes swapping icons a breeze, check out the usage below and you'll see why.
 
 # Demo
 
@@ -13,6 +13,7 @@ A library containing over 1000 material vector icons that can be easily used as 
  - Currently contains 1457 icons, you can look at them here: https://materialdesignicons.com
  - Configured in less than a minute
  - Adds about 200kb to your apk (so a wopping average of __170 bytes per icon__)
+ - Includes a custom Drawable, IconView and a MenuInflater for all different icon use cases
 
 # Usage
 
@@ -24,19 +25,23 @@ Get the font file [__here__](https://github.com/code-mc/material-icon-lib/blob/m
 
 You don't have to worry about android including the file twice in your apk. Android Studio recognizes the duplicate file name and only keeps one copy in your apk!
 
+Previews work inside layout files, menu resource files sadly do not support previews (more on those below).
+
 ## Step 1
 
 #### Gradle
 
 ```groovy
 dependencies {
-    compile 'net.steamcrafted:materialiconlib:1.0.9'
+    compile 'net.steamcrafted:materialiconlib:1.1.0'
 }
 ```
 
 ## Step 2
 
-You now have the choice of using the provided `MaterialIconView` or just your preferred ImageView and use the `MaterialDrawable` as Drawable resource. Let's first go over the provided view:
+There's a total of 3 different use cases. You can use the provided [`MaterialIconView`](#MaterialIconView) which mostly is just a more advanced `ImageView` or use your preferred `ImageView` and use the [`MaterialDrawable`](#MaterialDrawable) as Drawable resource. If you want to spice up your `Toolbar` with icons from this library there is a custom [`MaterialMenuInflater`](#MaterialMenuInflater) that does just that in a single line of code.
+
+### MaterialIconView
 
 Add the view to your XML:
 
@@ -118,6 +123,8 @@ yourMaterialIconView.setScaleType(ScaleType.CENTER)
 // etc...
 ```
 
+### MaterialDrawable
+
 That was easy, right? Next up the custom drawables, they are internally used by the `MaterialIconView` so you'll see that they share many of the same methods.
 
 The initialisation happens using the `MaterialDrawableBuilder`, which you can use to set all the properties of the drawable:
@@ -181,6 +188,57 @@ builder.getOpacity();
 // Sets a custom paint style (for the more advanced devs)
 builder.setStyle(Paint.Style style);
 ```
+
+### MaterialMenuInflater
+
+With the `MaterialMenuInflater` you can use any of the icons available in this library *inside* your menu resource files. In XML you'd have to do the following:
+
+```xml
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" <!-- important, you'll have to include this to use the custom xml attributes -->
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <!-- example of a menu item with an icon -->
+    <item
+        android:title="Disable Wifi"
+        app:showAsAction="always"
+        app:materialIcon="wifi_off" <!-- This sets the icon, HAS AUTOCOMPLETE ;) -->
+        app:materialIconColor="#FE0000" <!-- Sets the icon color -->
+    />
+
+</menu>
+```
+
+To actually inflate this menu you'll now have to use the `MaterialMenuInflater` instead of the default one. For the AppCompatActivity do the following in your `onCreateOptionsMenu`:
+
+```java
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    MaterialMenuInflater
+            .with(this) // Provide the activity context
+            // Set the fall-back color for all the icons. Colors set inside the XML will always have higher priority
+            .setDefaultColor(Color.BLUE)
+            // Inflate the menu
+            .inflate(R.menu.your_menu_resource, menu);
+    return true;
+}
+```
+
+Since the release of the Appcompat-v7 library you can also use the `Toolbar` view inside your XML layouts. Inflating a menu for a toolbar is a bit different from the usual way, but it is just as easy:
+
+```java
+// Get the toolbar from layout
+Toolbar toolbar = (Toolbar) findViewById(R.id.your_toolbar);
+
+MaterialMenuInflater
+        .with(this) // Provide a context, activity context will do just fine
+        // Set the fall-back color for all the icons. Colors set inside the XML will always have higher priority
+        .setDefaultColor(Color.BLUE)
+        // Inflate the menu
+        .inflate(R.menu.your_menu_resource, toolbar.getMenu());
+```
+
+And that's all there is to it.
 
 #License
 

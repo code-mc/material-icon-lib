@@ -67,7 +67,7 @@ public class MaterialDrawableBuilder {
         return new MaterialDrawableBuilder(context);
     }
 
-    public MaterialDrawable build() throws IconNotSetException{
+    public Drawable build() throws IconNotSetException{
         if(icon == null){
             throw new IconNotSetException();
         }
