@@ -1,22 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" >
-    <item app:showAsAction="always" android:title="a" app:materialIcon="wifi_off" app:materialIconColor="#FE0000"/>
-    <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_1_box" app:materialIconColor="#FF9C00"/>
-    <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_2_box" app:materialIconColor="#F5FF00"/>
-    <item app:showAsAction="always" android:title="a" app:materialIcon="numeric_3_box" app:materialIconColor="#3CF10E"/>
-
-    <item app:showAsAction="always" app:materialIcon="dots_vertical" app:materialIconColor="#000" android:title="But wait...">
-        <menu>
-            <item app:showAsAction="always" android:title="This" app:materialIcon="youtube_play" app:materialIconColor="#FE0000"/>
-            <item app:showAsAction="always" android:title="material" app:materialIcon="apple" app:materialIconColor="#FF9C00"/>
-            <item app:showAsAction="always" android:title="menu" app:materialIcon="microsoft" app:materialIconColor="#F5FF00"/>
-            <item app:showAsAction="always" android:title="thing" app:materialIcon="android" app:materialIconColor="#3CF10E"/>
-            <item app:showAsAction="always" android:title="is" app:materialIcon="apple_ios" app:materialIconColor="#01FFE5"/>
-            <item app:showAsAction="always" android:title="pretty" app:materialIcon="amazon" app:materialIconColor="#0024FF"/>
-            <item app:showAsAction="always" android:title="amazing" app:materialIcon="facebook" app:materialIconColor="#C500FF"/>
-            <item app:showAsAction="always" android:title="!" app:materialIcon="github_circle" app:materialIconColor="#FF009C"/>
-        </menu>
-    </item>
+    <item app:showAsAction="always" android:title="a" app:materialIcon="content_copy" app:materialIconColor="#FE0000"/>
+    <item app:showAsAction="always" android:title="a" app:materialIcon="select_all" app:materialIconColor="#FF9C00"/>
+    <item app:showAsAction="always" android:title="a" app:materialIcon="content_paste" app:materialIconColor="#2255ff"/>
 
 </menu>

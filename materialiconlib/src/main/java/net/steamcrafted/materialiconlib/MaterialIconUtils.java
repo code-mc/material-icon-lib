@@ -28,7 +28,7 @@ public class MaterialIconUtils {
     }
 
     public static String getIconString(int iconIndex){
-        return new String(Character.toChars(0xF101 + iconIndex));
+        return new String(Character.toChars(0xF001 + iconIndex));
     }
 
     public static int getColorResource(Context context, int colorResource){

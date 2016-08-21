@@ -15,6 +15,24 @@ def dumpSvg():
 def writeXml():
 	with open("out.txt", "r+") as f:
 		content = f.read()
+
+		srtd = list()
+		for index, i in enumerate(content.split('\n')):
+			try:
+				enum = i.split("\t")
+				name = enum[0]
+				hexcode = enum[1]
+
+				if name in ["import", "package", "switch"]:
+					name += "-icon"
+
+				hexcode = hexcode.replace("&#", "0")[:-1]
+				srtd.append((int(hexcode, 16), name))
+			except:
+				continue
+
+		srtd.sort()
+
 		parsed = """<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="MaterialIconView">
@@ -26,11 +44,17 @@ def writeXml():
 		write = ""
 		arr = list()
 		arrhex = list()
-		for index, i in enumerate(content.split('\n')):
+		print "start code:", srtd[0], hex(srtd[0][0])
+		prevhex = srtd[0][0] - 1
+		for index, i in enumerate(srtd):
 			try:
-				enum = i.split("\t")
-				name = enum[0]
-				hexcode = enum[1]
+				name = str(i[1])
+				hexcode = str(i[0])
+
+				if i[0] != prevhex + 1:
+					print "gap in hexcodes:", prevhex, i[0]
+				prevhex = i[0]
+
 				write += """\t\t\t<enum name="{0}" value="{1}"/>\n""".format(name.replace("-","_"), str(index))
 				arr.append(name)
 				arrhex.append(hexcode)
