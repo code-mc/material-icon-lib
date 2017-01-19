@@ -67,7 +67,7 @@
             <enum name="apple_ios" value="54"/>
             <enum name="apple_mobileme" value="55"/>
             <enum name="apple_safari" value="56"/>
-            <enum name="appnet" value="57"/>
+            <enum name="font_awesome" value="57"/>
             <enum name="apps" value="58"/>
             <enum name="archive" value="59"/>
             <enum name="arrange_bring_forward" value="60"/>
@@ -1143,7 +1143,7 @@
             <enum name="rss" value="1130"/>
             <enum name="rss_box" value="1131"/>
             <enum name="ruler" value="1132"/>
-            <enum name="run" value="1133"/>
+            <enum name="run_fast" value="1133"/>
             <enum name="sale" value="1134"/>
             <enum name="satellite" value="1135"/>
             <enum name="satellite_variant" value="1136"/>
@@ -1714,7 +1714,7 @@
             <enum name="publish" value="1701"/>
             <enum name="restore" value="1702"/>
             <enum name="robot" value="1703"/>
-            <enum name="rotate_90" value="1704"/>
+            <enum name="format_rotate_90" value="1704"/>
             <enum name="scanner" value="1705"/>
             <enum name="subway" value="1706"/>
             <enum name="timer_sand_empty" value="1707"/>
@@ -1722,6 +1722,130 @@
             <enum name="unity" value="1709"/>
             <enum name="update" value="1710"/>
             <enum name="watch_vibrate" value="1711"/>
+            <enum name="angular" value="1712"/>
+            <enum name="dolby" value="1713"/>
+            <enum name="emby" value="1714"/>
+            <enum name="lamp" value="1715"/>
+            <enum name="menu_down_outline" value="1716"/>
+            <enum name="menu_up_outline" value="1717"/>
+            <enum name="note_multiple" value="1718"/>
+            <enum name="note_multiple_outline" value="1719"/>
+            <enum name="plex" value="1720"/>
+            <enum name="plane_shield" value="1721"/>
+            <enum name="account_edit" value="1722"/>
+            <enum name="alert_octagram" value="1723"/>
+            <enum name="all_inclusive" value="1724"/>
+            <enum name="angularjs" value="1725"/>
+            <enum name="arrow_down_box" value="1726"/>
+            <enum name="arrow_left_box" value="1727"/>
+            <enum name="arrow_right_box" value="1728"/>
+            <enum name="arrow_up_box" value="1729"/>
+            <enum name="asterisk" value="1730"/>
+            <enum name="bomb_off" value="1731"/>
+            <enum name="bootstrap" value="1732"/>
+            <enum name="cards_variant" value="1733"/>
+            <enum name="clipboard_flow" value="1734"/>
+            <enum name="close_outline" value="1735"/>
+            <enum name="coffee_outline" value="1736"/>
+            <enum name="contacts" value="1737"/>
+            <enum name="delete_empty" value="1738"/>
+            <enum name="earth_box" value="1739"/>
+            <enum name="earth_box_off" value="1740"/>
+            <enum name="email_alert" value="1741"/>
+            <enum name="eye_outline" value="1742"/>
+            <enum name="eye_outline_off" value="1743"/>
+            <enum name="fast_forward_outline" value="1744"/>
+            <enum name="feather" value="1745"/>
+            <enum name="find_replace" value="1746"/>
+            <enum name="flash_outline" value="1747"/>
+            <enum name="format_font" value="1748"/>
+            <enum name="format_page_break" value="1749"/>
+            <enum name="format_pilcrow" value="1750"/>
+            <enum name="garage" value="1751"/>
+            <enum name="garage_open" value="1752"/>
+            <enum name="github_face" value="1753"/>
+            <enum name="google_keep" value="1754"/>
+            <enum name="google_photos" value="1755"/>
+            <enum name="heart_half_outline" value="1756"/>
+            <enum name="heart_half_part" value="1757"/>
+            <enum name="heart_half_part_outline" value="1758"/>
+            <enum name="hexagon_multiple" value="1759"/>
+            <enum name="hook" value="1760"/>
+            <enum name="hook_off" value="1761"/>
+            <enum name="infinity" value="1762"/>
+            <enum name="language_swift" value="1763"/>
+            <enum name="language_typescript" value="1764"/>
+            <enum name="laptop_off" value="1765"/>
+            <enum name="lightbulb_on" value="1766"/>
+            <enum name="lightbulb_on_outline" value="1767"/>
+            <enum name="lock_pattern" value="1768"/>
+            <enum name="loop" value="1769"/>
+            <enum name="magnify_minus_outline" value="1770"/>
+            <enum name="magnify_plus_outline" value="1771"/>
+            <enum name="mailbox" value="1772"/>
+            <enum name="medical_bag" value="1773"/>
+            <enum name="message_settings" value="1774"/>
+            <enum name="message_settings_variant" value="1775"/>
+            <enum name="minus_box_outline" value="1776"/>
+            <enum name="network" value="1777"/>
+            <enum name="network_download" value="1778"/>
+            <enum name="network_question" value="1779"/>
+            <enum name="network_upload" value="1780"/>
+            <enum name="npm" value="1781"/>
+            <enum name="nut" value="1782"/>
+            <enum name="octagram" value="1783"/>
+            <enum name="page_layout_body" value="1784"/>
+            <enum name="page_layout_footer" value="1785"/>
+            <enum name="page_layout_header" value="1786"/>
+            <enum name="page_layout_sidebar_left" value="1787"/>
+            <enum name="page_layout_sidebar_right" value="1788"/>
+            <enum name="pencil_circle" value="1789"/>
+            <enum name="pentagon" value="1790"/>
+            <enum name="pentagon_outline" value="1791"/>
+            <enum name="pillar" value="1792"/>
+            <enum name="pistol" value="1793"/>
+            <enum name="plus_box_outline" value="1794"/>
+            <enum name="plus_outline" value="1795"/>
+            <enum name="prescription" value="1796"/>
+            <enum name="printer_settings" value="1797"/>
+            <enum name="react" value="1798"/>
+            <enum name="restart" value="1799"/>
+            <enum name="rewind_outline" value="1800"/>
+            <enum name="rhombus" value="1801"/>
+            <enum name="rhombus_outline" value="1802"/>
+            <enum name="roomba" value="1803"/>
+            <enum name="run" value="1804"/>
+            <enum name="search_web" value="1805"/>
+            <enum name="shovel" value="1806"/>
+            <enum name="shovel_off" value="1807"/>
+            <enum name="signal_2g" value="1808"/>
+            <enum name="signal_3g" value="1809"/>
+            <enum name="signal_4g" value="1810"/>
+            <enum name="signal_hspa" value="1811"/>
+            <enum name="signal_hspa_plus" value="1812"/>
+            <enum name="snowflake" value="1813"/>
+            <enum name="source_commit" value="1814"/>
+            <enum name="source_commit_end" value="1815"/>
+            <enum name="source_commit_end_local" value="1816"/>
+            <enum name="source_commit_local" value="1817"/>
+            <enum name="source_commit_next_local" value="1818"/>
+            <enum name="source_commit_start" value="1819"/>
+            <enum name="source_commit_start_next_local" value="1820"/>
+            <enum name="speaker_wireless" value="1821"/>
+            <enum name="stadium" value="1822"/>
+            <enum name="svg" value="1823"/>
+            <enum name="tag_plus" value="1824"/>
+            <enum name="tag_remove" value="1825"/>
+            <enum name="ticket_percent" value="1826"/>
+            <enum name="tilde" value="1827"/>
+            <enum name="treasure_chest" value="1828"/>
+            <enum name="truck_trailer" value="1829"/>
+            <enum name="view_parallel" value="1830"/>
+            <enum name="view_sequential" value="1831"/>
+            <enum name="washing_machine" value="1832"/>
+            <enum name="webpack" value="1833"/>
+            <enum name="widgets" value="1834"/>
+            <enum name="wiiu" value="1835"/>
         </attr>
     </declare-styleable>
 </resources>
