@@ -33,7 +33,7 @@ Previews work inside layout files, menu resource files sadly do not support prev
 
 ```groovy
 dependencies {
-    compile 'net.steamcrafted:materialiconlib:1.1.2'
+    compile 'net.steamcrafted:materialiconlib:1.1.3'
 }
 ```
 

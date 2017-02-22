@@ -14,7 +14,6 @@
         android:textColor="#fff"
         android:padding="12dp"
         android:gravity="center"
-        android:id="@+id/icon"
         />
 
     <ImageView
@@ -22,35 +21,7 @@
         android:layout_height="48dp"
         android:padding="12dp"
         android:background="@android:color/darker_gray"
-        android:layout_below="@id/icon"
         android:layout_marginTop="8dp"
         android:id="@+id/image_icon"/>
-
-    <net.steamcrafted.materialiconlib.MaterialIconView
-        android:layout_width="104dp"
-        android:layout_height="104dp"
-        app:materialIcon="emoticon_devil"
-        app:materialIconSize="48dp"
-        android:scaleType="center"
-        android:textColor="#333"
-
-        android:gravity="center"
-        android:background="#33EE2222"
-        android:layout_toRightOf="@id/icon"
-        android:layout_marginLeft="8dp"
-        android:id="@+id/icon_1"
-        android:layout_marginBottom="8dp"
-        />
-
-    <net.steamcrafted.materialiconlib.MaterialIconView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="12dp"
-        app:materialIcon="settings"
-        app:materialIconColor="#F60000"
-        app:materialIconSize="150dp"
-        android:scaleType="center"
-        android:layout_centerInParent="true"
-        />
 
 </RelativeLayout>

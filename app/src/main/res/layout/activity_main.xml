@@ -86,19 +86,9 @@
         app:title="Toolbar context"
         app:theme="@style/ToolbarTheme" />
 
-    <android.support.v7.widget.Toolbar
+    <net.steamcrafted.materialiconview.SetBoundsTest
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:id="@+id/toolbar_2"
-        app:title="Activity context"
-        app:theme="@style/ToolbarTheme" />
-
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:id="@+id/toolbar_3"
-        app:title="Default color"
-        app:theme="@style/ToolbarTheme" />
+        android:layout_height="144dp" />
 
     <net.steamcrafted.materialiconlib.MaterialIconView
         android:layout_width="match_parent"

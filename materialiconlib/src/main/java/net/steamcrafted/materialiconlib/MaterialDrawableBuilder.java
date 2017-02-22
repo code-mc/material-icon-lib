@@ -254,12 +254,17 @@ public class MaterialDrawableBuilder {
         private final Rect mCachedRect = new Rect();
         @Override
         public void draw(Canvas canvas) {
-            paint.setTextSize(getBounds().height());
+            // Center drawable within available bounds
+            int boundsWidth = getBounds().width();
+            int boundsHeight = getBounds().height();
+            int dimen = Math.min(boundsWidth, boundsHeight);
+
+            paint.setTextSize(dimen);
             String textValue = MaterialIconUtils.getIconString(icon.ordinal());
             paint.getTextBounds(textValue, 0, 1, mCachedRect);
-            float textBottom = (getBounds().height() - mCachedRect.height()) / 2f + mCachedRect.height() - mCachedRect.bottom;
+            float textBottom = getBounds().top + (boundsHeight - mCachedRect.height()) / 2f + mCachedRect.height() - mCachedRect.bottom;
 
-            canvas.drawText(textValue, getBounds().width() / 2f, textBottom, paint);
+            canvas.drawText(textValue, getBounds().left + boundsWidth / 2f, textBottom, paint);
         }
 
         @Override

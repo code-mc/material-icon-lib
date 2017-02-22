@@ -37,14 +37,6 @@ public class MainActivity extends AppCompatActivity {
         MaterialMenuInflater.with(toolbar1.getContext(), new SupportMenuInflater(toolbar1.getContext()))
                 .inflate(R.menu.menu_nocolor, toolbar1.getMenu());
 
-        Toolbar toolbar2 = (Toolbar) findViewById(R.id.toolbar_2);
-        MaterialMenuInflater.with(this)
-                .inflate(R.menu.menu_nocolor, toolbar2.getMenu());
-
-        Toolbar toolbar3 = (Toolbar) findViewById(R.id.toolbar_3);
-        MaterialMenuInflater.with(this)
-                .inflate(R.menu.menu_nocolor, toolbar3.getMenu());
-
 
         // Activity Theme materialIconColor attribute (lowest priority default color)
         // View specific Theme e.g. app:theme="..."   (2nd lowest in priority)
