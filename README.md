@@ -240,7 +240,7 @@ MaterialMenuInflater
 
 And that's all there is to it.
 
-#License
+# License
 
 Released under the [Apache 2.0 License](https://github.com/code-mc/material-icon-lib/blob/master/license.md)
 
