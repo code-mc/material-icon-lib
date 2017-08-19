@@ -23,7 +23,7 @@ def writeXml():
 				name = enum[0]
 				hexcode = enum[1]
 
-				if name in ["import", "package", "switch"]:
+				if name in ["import", "package", "switch", "null"]:
 					name += "-icon"
 
 				hexcode = hexcode.replace("&#", "0")[:-1]

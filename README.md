@@ -1,6 +1,6 @@
 # Material Icon Library
 
-A library containing over 1500 material vector icons that can be easily used as Drawable, a standalone View or inside menu resource files. Tired of having to search for and generate png resources every time you want to test something? This library puts an end to that burden and makes swapping icons a breeze, check out the usage below and you'll see why.
+A library containing over 2000 material vector icons that can be easily used as Drawable, a standalone View or inside menu resource files. Tired of having to search for and generate png resources every time you want to test something? This library puts an end to that burden and makes swapping icons a breeze, check out the usage below and you'll see why.
 
 # Demo
 
@@ -10,9 +10,9 @@ A library containing over 1500 material vector icons that can be easily used as 
 
  - MinSdk 4
  - LIVE previews and code completion in the Android Studio Designer (Does NOT work out of the box, see step 0 below!)
- - Currently contains 1836 icons, you can look at them here: https://materialdesignicons.com
+ - Currently contains 2046 icons, you can look at them here: https://materialdesignicons.com
  - Configured in less than a minute
- - Adds about 200kb to your apk (so a wopping average of __112 bytes per icon__)
+ - Adds about 220kb to your apk (so a wopping average of __112 bytes per icon__)
  - Includes a custom Drawable, IconView and a MenuInflater for all different icon use cases
 
 # Usage
@@ -33,7 +33,7 @@ Previews work inside layout files, menu resource files sadly do not support prev
 
 ```groovy
 dependencies {
-    compile 'net.steamcrafted:materialiconlib:1.1.3'
+    compile 'net.steamcrafted:materialiconlib:1.1.4'
 }
 ```
 

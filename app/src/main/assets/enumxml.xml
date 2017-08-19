@@ -25,7 +25,7 @@
 			<enum name="account_remove" value="20"/>
 			<enum name="account_search" value="21"/>
 			<enum name="account_star" value="22"/>
-			<enum name="account_star_variant" value="23"/>
+			<enum name="orbit" value="23"/>
 			<enum name="account_switch" value="24"/>
 			<enum name="adjust" value="25"/>
 			<enum name="air_conditioner" value="26"/>
@@ -69,9 +69,9 @@
 			<enum name="arrow_all" value="64"/>
 			<enum name="arrow_bottom_left" value="65"/>
 			<enum name="arrow_bottom_right" value="66"/>
-			<enum name="arrow_compress_all" value="67"/>
+			<enum name="arrow_collapse_all" value="67"/>
 			<enum name="arrow_down" value="68"/>
-			<enum name="arrow_down_bold" value="69"/>
+			<enum name="arrow_down_thick" value="69"/>
 			<enum name="arrow_down_bold_circle" value="70"/>
 			<enum name="arrow_down_bold_circle_outline" value="71"/>
 			<enum name="arrow_down_bold_hexagon_outline" value="72"/>
@@ -79,14 +79,14 @@
 			<enum name="arrow_down_drop_circle_outline" value="74"/>
 			<enum name="arrow_expand_all" value="75"/>
 			<enum name="arrow_left" value="76"/>
-			<enum name="arrow_left_bold" value="77"/>
+			<enum name="arrow_left_thick" value="77"/>
 			<enum name="arrow_left_bold_circle" value="78"/>
 			<enum name="arrow_left_bold_circle_outline" value="79"/>
 			<enum name="arrow_left_bold_hexagon_outline" value="80"/>
 			<enum name="arrow_left_drop_circle" value="81"/>
 			<enum name="arrow_left_drop_circle_outline" value="82"/>
 			<enum name="arrow_right" value="83"/>
-			<enum name="arrow_right_bold" value="84"/>
+			<enum name="arrow_right_thick" value="84"/>
 			<enum name="arrow_right_bold_circle" value="85"/>
 			<enum name="arrow_right_bold_circle_outline" value="86"/>
 			<enum name="arrow_right_bold_hexagon_outline" value="87"/>
@@ -95,7 +95,7 @@
 			<enum name="arrow_top_left" value="90"/>
 			<enum name="arrow_top_right" value="91"/>
 			<enum name="arrow_up" value="92"/>
-			<enum name="arrow_up_bold" value="93"/>
+			<enum name="arrow_up_thick" value="93"/>
 			<enum name="arrow_up_bold_circle" value="94"/>
 			<enum name="arrow_up_bold_circle_outline" value="95"/>
 			<enum name="arrow_up_bold_hexagon_outline" value="96"/>
@@ -357,7 +357,7 @@
 			<enum name="cloud_circle" value="352"/>
 			<enum name="cloud_download" value="353"/>
 			<enum name="cloud_outline" value="354"/>
-			<enum name="cloud_outline_off" value="355"/>
+			<enum name="cloud_off_outline" value="355"/>
 			<enum name="cloud_print" value="356"/>
 			<enum name="cloud_print_outline" value="357"/>
 			<enum name="cloud_upload" value="358"/>
@@ -639,7 +639,7 @@
 			<enum name="format_list_numbers" value="634"/>
 			<enum name="format_paint" value="635"/>
 			<enum name="format_paragraph" value="636"/>
-			<enum name="format_quote" value="637"/>
+			<enum name="format_quote_close" value="637"/>
 			<enum name="format_size" value="638"/>
 			<enum name="format_strikethrough" value="639"/>
 			<enum name="format_strikethrough_variant" value="640"/>
@@ -1359,8 +1359,8 @@
 			<enum name="umbrella_outline" value="1354"/>
 			<enum name="undo" value="1355"/>
 			<enum name="undo_variant" value="1356"/>
-			<enum name="unfold_less" value="1357"/>
-			<enum name="unfold_more" value="1358"/>
+			<enum name="unfold_less_horizontal" value="1357"/>
+			<enum name="unfold_more_horizontal" value="1358"/>
 			<enum name="ungroup" value="1359"/>
 			<enum name="untappd" value="1360"/>
 			<enum name="upload" value="1361"/>
@@ -1558,7 +1558,7 @@
 			<enum name="watermark" value="1553"/>
 			<enum name="file_hidden" value="1554"/>
 			<enum name="application" value="1555"/>
-			<enum name="arrow_compress" value="1556"/>
+			<enum name="arrow_collapse" value="1556"/>
 			<enum name="arrow_expand" value="1557"/>
 			<enum name="bowl" value="1558"/>
 			<enum name="bridge" value="1559"/>
@@ -1725,7 +1725,7 @@
 			<enum name="plex" value="1720"/>
 			<enum name="plane_shield" value="1721"/>
 			<enum name="account_edit" value="1722"/>
-			<enum name="alert_octagram" value="1723"/>
+			<enum name="alert_decagram" value="1723"/>
 			<enum name="all_inclusive" value="1724"/>
 			<enum name="angularjs" value="1725"/>
 			<enum name="arrow_down_box" value="1726"/>
@@ -1745,7 +1745,7 @@
 			<enum name="earth_box_off" value="1740"/>
 			<enum name="email_alert" value="1741"/>
 			<enum name="eye_outline" value="1742"/>
-			<enum name="eye_outline_off" value="1743"/>
+			<enum name="eye_off_outline" value="1743"/>
 			<enum name="fast_forward_outline" value="1744"/>
 			<enum name="feather" value="1745"/>
 			<enum name="find_replace" value="1746"/>
@@ -1758,9 +1758,9 @@
 			<enum name="github_face" value="1753"/>
 			<enum name="google_keep" value="1754"/>
 			<enum name="google_photos" value="1755"/>
-			<enum name="heart_half_outline" value="1756"/>
-			<enum name="heart_half_part" value="1757"/>
-			<enum name="heart_half_part_outline" value="1758"/>
+			<enum name="heart_half_full" value="1756"/>
+			<enum name="heart_half" value="1757"/>
+			<enum name="heart_half_outline" value="1758"/>
 			<enum name="hexagon_multiple" value="1759"/>
 			<enum name="hook" value="1760"/>
 			<enum name="hook_off" value="1761"/>
@@ -1780,9 +1780,9 @@
 			<enum name="message_settings_variant" value="1775"/>
 			<enum name="minus_box_outline" value="1776"/>
 			<enum name="network" value="1777"/>
-			<enum name="network_download" value="1778"/>
-			<enum name="network_question" value="1779"/>
-			<enum name="network_upload" value="1780"/>
+			<enum name="download_network" value="1778"/>
+			<enum name="help_network" value="1779"/>
+			<enum name="upload_network" value="1780"/>
 			<enum name="npm" value="1781"/>
 			<enum name="nut" value="1782"/>
 			<enum name="octagram" value="1783"/>
@@ -1838,6 +1838,216 @@
 			<enum name="webpack" value="1833"/>
 			<enum name="widgets" value="1834"/>
 			<enum name="wiiu" value="1835"/>
+			<enum name="arrow_down_bold" value="1836"/>
+			<enum name="arrow_down_bold_box" value="1837"/>
+			<enum name="arrow_down_bold_box_outline" value="1838"/>
+			<enum name="arrow_left_bold" value="1839"/>
+			<enum name="arrow_left_bold_box" value="1840"/>
+			<enum name="arrow_left_bold_box_outline" value="1841"/>
+			<enum name="arrow_right_bold" value="1842"/>
+			<enum name="arrow_right_bold_box" value="1843"/>
+			<enum name="arrow_right_bold_box_outline" value="1844"/>
+			<enum name="arrow_up_bold" value="1845"/>
+			<enum name="arrow_up_bold_box" value="1846"/>
+			<enum name="arrow_up_bold_box_outline" value="1847"/>
+			<enum name="cancel" value="1848"/>
+			<enum name="file_account" value="1849"/>
+			<enum name="gesture_double_tap" value="1850"/>
+			<enum name="gesture_swipe_down" value="1851"/>
+			<enum name="gesture_swipe_left" value="1852"/>
+			<enum name="gesture_swipe_right" value="1853"/>
+			<enum name="gesture_swipe_up" value="1854"/>
+			<enum name="gesture_tap" value="1855"/>
+			<enum name="gesture_two_double_tap" value="1856"/>
+			<enum name="gesture_two_tap" value="1857"/>
+			<enum name="humble_bundle" value="1858"/>
+			<enum name="kickstarter" value="1859"/>
+			<enum name="netflix" value="1860"/>
+			<enum name="onenote" value="1861"/>
+			<enum name="periscope" value="1862"/>
+			<enum name="uber" value="1863"/>
+			<enum name="vector_radius" value="1864"/>
+			<enum name="xbox_controller_battery_alert" value="1865"/>
+			<enum name="xbox_controller_battery_empty" value="1866"/>
+			<enum name="xbox_controller_battery_full" value="1867"/>
+			<enum name="xbox_controller_battery_low" value="1868"/>
+			<enum name="xbox_controller_battery_medium" value="1869"/>
+			<enum name="xbox_controller_battery_unknown" value="1870"/>
+			<enum name="clipboard_plus" value="1871"/>
+			<enum name="file_plus" value="1872"/>
+			<enum name="format_align_bottom" value="1873"/>
+			<enum name="format_align_middle" value="1874"/>
+			<enum name="format_align_top" value="1875"/>
+			<enum name="format_list_checks" value="1876"/>
+			<enum name="format_quote_open" value="1877"/>
+			<enum name="grid_large" value="1878"/>
+			<enum name="heart_off" value="1879"/>
+			<enum name="music" value="1880"/>
+			<enum name="music_off" value="1881"/>
+			<enum name="tab_plus" value="1882"/>
+			<enum name="volume_plus" value="1883"/>
+			<enum name="volume_minus" value="1884"/>
+			<enum name="volume_mute" value="1885"/>
+			<enum name="unfold_less_vertical" value="1886"/>
+			<enum name="unfold_more_vertical" value="1887"/>
+			<enum name="taco" value="1888"/>
+			<enum name="square_outline" value="1889"/>
+			<enum name="square" value="1890"/>
+			<enum name="circle" value="1891"/>
+			<enum name="circle_outline" value="1892"/>
+			<enum name="alert_octagram" value="1893"/>
+			<enum name="atom" value="1894"/>
+			<enum name="ceiling_light" value="1895"/>
+			<enum name="chart_bar_stacked" value="1896"/>
+			<enum name="chart_line_stacked" value="1897"/>
+			<enum name="decagram" value="1898"/>
+			<enum name="decagram_outline" value="1899"/>
+			<enum name="dice_multiple" value="1900"/>
+			<enum name="dice_d10" value="1901"/>
+			<enum name="folder_open" value="1902"/>
+			<enum name="guitar_acoustic" value="1903"/>
+			<enum name="loading" value="1904"/>
+			<enum name="lock_reset" value="1905"/>
+			<enum name="ninja" value="1906"/>
+			<enum name="octagram_outline" value="1907"/>
+			<enum name="pencil_circle_outline" value="1908"/>
+			<enum name="selection_off" value="1909"/>
+			<enum name="set_all" value="1910"/>
+			<enum name="set_center" value="1911"/>
+			<enum name="set_center_right" value="1912"/>
+			<enum name="set_left" value="1913"/>
+			<enum name="set_left_center" value="1914"/>
+			<enum name="set_left_right" value="1915"/>
+			<enum name="set_none" value="1916"/>
+			<enum name="set_right" value="1917"/>
+			<enum name="shield_half_full" value="1918"/>
+			<enum name="sign_direction" value="1919"/>
+			<enum name="sign_text" value="1920"/>
+			<enum name="signal_off" value="1921"/>
+			<enum name="square_root" value="1922"/>
+			<enum name="sticker_emoji" value="1923"/>
+			<enum name="summit" value="1924"/>
+			<enum name="sword_cross" value="1925"/>
+			<enum name="truck_fast" value="1926"/>
+			<enum name="yammer" value="1927"/>
+			<enum name="cast_off" value="1928"/>
+			<enum name="help_box" value="1929"/>
+			<enum name="timer_sand_full" value="1930"/>
+			<enum name="waves" value="1931"/>
+			<enum name="alarm_bell" value="1932"/>
+			<enum name="alarm_light" value="1933"/>
+			<enum name="android_head" value="1934"/>
+			<enum name="approval" value="1935"/>
+			<enum name="arrow_collapse_down" value="1936"/>
+			<enum name="arrow_collapse_left" value="1937"/>
+			<enum name="arrow_collapse_right" value="1938"/>
+			<enum name="arrow_collapse_up" value="1939"/>
+			<enum name="arrow_expand_down" value="1940"/>
+			<enum name="arrow_expand_left" value="1941"/>
+			<enum name="arrow_expand_right" value="1942"/>
+			<enum name="arrow_expand_up" value="1943"/>
+			<enum name="book_secure" value="1944"/>
+			<enum name="book_unsecure" value="1945"/>
+			<enum name="bus_articulated_end" value="1946"/>
+			<enum name="bus_articulated_front" value="1947"/>
+			<enum name="bus_double_decker" value="1948"/>
+			<enum name="bus_school" value="1949"/>
+			<enum name="bus_side" value="1950"/>
+			<enum name="camera_gopro" value="1951"/>
+			<enum name="camera_metering_center" value="1952"/>
+			<enum name="camera_metering_matrix" value="1953"/>
+			<enum name="camera_metering_partial" value="1954"/>
+			<enum name="camera_metering_spot" value="1955"/>
+			<enum name="cannabis" value="1956"/>
+			<enum name="car_convertable" value="1957"/>
+			<enum name="car_estate" value="1958"/>
+			<enum name="car_hatchback" value="1959"/>
+			<enum name="car_pickup" value="1960"/>
+			<enum name="car_side" value="1961"/>
+			<enum name="car_sports" value="1962"/>
+			<enum name="caravan" value="1963"/>
+			<enum name="cctv" value="1964"/>
+			<enum name="chart_donut" value="1965"/>
+			<enum name="chart_donut_variant" value="1966"/>
+			<enum name="chart_line_variant" value="1967"/>
+			<enum name="chili_hot" value="1968"/>
+			<enum name="chili_medium" value="1969"/>
+			<enum name="chili_mild" value="1970"/>
+			<enum name="cloud_braces" value="1971"/>
+			<enum name="cloud_tags" value="1972"/>
+			<enum name="console_line" value="1973"/>
+			<enum name="corn" value="1974"/>
+			<enum name="currency_chf" value="1975"/>
+			<enum name="currency_cny" value="1976"/>
+			<enum name="currency_eth" value="1977"/>
+			<enum name="currency_jpy" value="1978"/>
+			<enum name="currency_krw" value="1979"/>
+			<enum name="currency_sign" value="1980"/>
+			<enum name="currency_twd" value="1981"/>
+			<enum name="desktop_classic" value="1982"/>
+			<enum name="dip_switch" value="1983"/>
+			<enum name="donkey" value="1984"/>
+			<enum name="dots_horizontal_circle" value="1985"/>
+			<enum name="dots_vertical_circle" value="1986"/>
+			<enum name="ear_hearing" value="1987"/>
+			<enum name="elephant" value="1988"/>
+			<enum name="eventbrite" value="1989"/>
+			<enum name="food_croissant" value="1990"/>
+			<enum name="forklift" value="1991"/>
+			<enum name="fuel" value="1992"/>
+			<enum name="gesture" value="1993"/>
+			<enum name="google_analytics" value="1994"/>
+			<enum name="google_assistant" value="1995"/>
+			<enum name="headphones_off" value="1996"/>
+			<enum name="high_definition" value="1997"/>
+			<enum name="home_assistant" value="1998"/>
+			<enum name="home_automation" value="1999"/>
+			<enum name="home_circle" value="2000"/>
+			<enum name="language_go" value="2001"/>
+			<enum name="language_r" value="2002"/>
+			<enum name="lava_lamp" value="2003"/>
+			<enum name="led_strip" value="2004"/>
+			<enum name="locker" value="2005"/>
+			<enum name="locker_multiple" value="2006"/>
+			<enum name="map_marker_outline" value="2007"/>
+			<enum name="metronome" value="2008"/>
+			<enum name="metronome_tick" value="2009"/>
+			<enum name="micro_sd" value="2010"/>
+			<enum name="mixer" value="2011"/>
+			<enum name="movie_roll" value="2012"/>
+			<enum name="mushroom" value="2013"/>
+			<enum name="mushroom_outline" value="2014"/>
+			<enum name="nintendo_switch" value="2015"/>
+			<enum name="null" value="2016"/>
+			<enum name="passport" value="2017"/>
+			<enum name="periodic_table_co2" value="2018"/>
+			<enum name="pipe" value="2019"/>
+			<enum name="pipe_disconnected" value="2020"/>
+			<enum name="power_socket_eu" value="2021"/>
+			<enum name="power_socket_uk" value="2022"/>
+			<enum name="power_socket_us" value="2023"/>
+			<enum name="rice" value="2024"/>
+			<enum name="ring" value="2025"/>
+			<enum name="sass" value="2026"/>
+			<enum name="send_secure" value="2027"/>
+			<enum name="soy_sauce" value="2028"/>
+			<enum name="standard_definition" value="2029"/>
+			<enum name="surround_sound_2_0" value="2030"/>
+			<enum name="surround_sound_3_1" value="2031"/>
+			<enum name="surround_sound_5_1" value="2032"/>
+			<enum name="surround_sound_7_1" value="2033"/>
+			<enum name="television_classic" value="2034"/>
+			<enum name="textbox_password" value="2035"/>
+			<enum name="thought_bubble" value="2036"/>
+			<enum name="thought_bubble_outline" value="2037"/>
+			<enum name="trackpad" value="2038"/>
+			<enum name="ultra_high_definition" value="2039"/>
+			<enum name="van_passenger" value="2040"/>
+			<enum name="van_utility" value="2041"/>
+			<enum name="vanish" value="2042"/>
+			<enum name="video_3d" value="2043"/>
+			<enum name="wall" value="2044"/>
+			<enum name="xmpp" value="2045"/>
 
         </attr>
     </declare-styleable>
