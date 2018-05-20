@@ -47,7 +47,7 @@
 			<enum name="alpha" value="42"/>
 			<enum name="alphabetical" value="43"/>
 			<enum name="amazon" value="44"/>
-			<enum name="amazon_clouddrive" value="45"/>
+			<enum name="amazon_drive" value="45"/>
 			<enum name="ambulance" value="46"/>
 			<enum name="amplifier" value="47"/>
 			<enum name="anchor" value="48"/>
@@ -57,7 +57,7 @@
 			<enum name="apple" value="52"/>
 			<enum name="apple_finder" value="53"/>
 			<enum name="apple_ios" value="54"/>
-			<enum name="apple_mobileme" value="55"/>
+			<enum name="apple_icloud" value="55"/>
 			<enum name="apple_safari" value="56"/>
 			<enum name="font_awesome" value="57"/>
 			<enum name="apps" value="58"/>
@@ -575,7 +575,7 @@
 			<enum name="flag" value="570"/>
 			<enum name="flag_checkered" value="571"/>
 			<enum name="flag_outline" value="572"/>
-			<enum name="flag_outline_variant" value="573"/>
+			<enum name="flag_variant_outline" value="573"/>
 			<enum name="flag_triangle" value="574"/>
 			<enum name="flag_variant" value="575"/>
 			<enum name="flash" value="576"/>
@@ -714,7 +714,7 @@
 			<enum name="guitar_pick_outline" value="709"/>
 			<enum name="hand_pointing_right" value="710"/>
 			<enum name="hanger" value="711"/>
-			<enum name="hangouts" value="712"/>
+			<enum name="google_hangouts" value="712"/>
 			<enum name="harddisk" value="713"/>
 			<enum name="headphones" value="714"/>
 			<enum name="headphones_box" value="715"/>
@@ -855,7 +855,7 @@
 			<enum name="margin" value="850"/>
 			<enum name="markdown" value="851"/>
 			<enum name="marker_check" value="852"/>
-			<enum name="martini" value="853"/>
+			<enum name="glass_cocktail" value="853"/>
 			<enum name="material_ui" value="854"/>
 			<enum name="math_compass" value="855"/>
 			<enum name="maxcdn" value="856"/>
@@ -915,8 +915,8 @@
 			<enum name="nature_people" value="910"/>
 			<enum name="navigation" value="911"/>
 			<enum name="needle" value="912"/>
-			<enum name="nest_protect" value="913"/>
-			<enum name="nest_thermostat" value="914"/>
+			<enum name="smoke_detector" value="913"/>
+			<enum name="thermostat" value="914"/>
 			<enum name="new_box" value="915"/>
 			<enum name="newspaper" value="916"/>
 			<enum name="nfc" value="917"/>
@@ -1095,9 +1095,9 @@
 			<enum name="ray_start_arrow" value="1090"/>
 			<enum name="ray_start_end" value="1091"/>
 			<enum name="ray_vertex" value="1092"/>
-			<enum name="rdio" value="1093"/>
+			<enum name="lastpass" value="1093"/>
 			<enum name="read" value="1094"/>
-			<enum name="readability" value="1095"/>
+			<enum name="youtube_tv" value="1095"/>
 			<enum name="receipt" value="1096"/>
 			<enum name="record" value="1097"/>
 			<enum name="record_rec" value="1098"/>
@@ -1229,7 +1229,7 @@
 			<enum name="spotlight_beam" value="1224"/>
 			<enum name="square_inc" value="1225"/>
 			<enum name="square_inc_cash" value="1226"/>
-			<enum name="stackoverflow" value="1227"/>
+			<enum name="stack_overflow" value="1227"/>
 			<enum name="stairs" value="1228"/>
 			<enum name="star" value="1229"/>
 			<enum name="star_circle" value="1230"/>
@@ -1322,7 +1322,7 @@
 			<enum name="tooltip_outline" value="1317"/>
 			<enum name="tooltip_outline_plus" value="1318"/>
 			<enum name="tooltip_text" value="1319"/>
-			<enum name="tooth" value="1320"/>
+			<enum name="tooth_outline" value="1320"/>
 			<enum name="tor" value="1321"/>
 			<enum name="traffic_light" value="1322"/>
 			<enum name="train" value="1323"/>
@@ -1401,7 +1401,7 @@
 			<enum name="view_stream" value="1396"/>
 			<enum name="view_week" value="1397"/>
 			<enum name="vimeo" value="1398"/>
-			<enum name="vine" value="1399"/>
+			<enum name="venmo" value="1399"/>
 			<enum name="vk" value="1400"/>
 			<enum name="vk_box" value="1401"/>
 			<enum name="vk_circle" value="1402"/>
@@ -1476,7 +1476,7 @@
 			<enum name="xml" value="1471"/>
 			<enum name="yeast" value="1472"/>
 			<enum name="yelp" value="1473"/>
-			<enum name="youtube_play" value="1474"/>
+			<enum name="youtube" value="1474"/>
 			<enum name="zip_box" value="1475"/>
 			<enum name="surround_sound" value="1476"/>
 			<enum name="vector_rectangle" value="1477"/>
@@ -1503,7 +1503,7 @@
 			<enum name="book_plus" value="1498"/>
 			<enum name="boombox" value="1499"/>
 			<enum name="bullseye" value="1500"/>
-			<enum name="burst_mode" value="1501"/>
+			<enum name="comment_remove" value="1501"/>
 			<enum name="camera_off" value="1502"/>
 			<enum name="check_circle" value="1503"/>
 			<enum name="check_circle_outline" value="1504"/>
@@ -1548,7 +1548,7 @@
 			<enum name="rowing" value="1543"/>
 			<enum name="saxophone" value="1544"/>
 			<enum name="signal_variant" value="1545"/>
-			<enum name="stackexchange" value="1546"/>
+			<enum name="stack_exchange" value="1546"/>
 			<enum name="subdirectory_arrow_left" value="1547"/>
 			<enum name="subdirectory_arrow_right" value="1548"/>
 			<enum name="textbox" value="1549"/>
@@ -1805,7 +1805,7 @@
 			<enum name="rewind_outline" value="1800"/>
 			<enum name="rhombus" value="1801"/>
 			<enum name="rhombus_outline" value="1802"/>
-			<enum name="roomba" value="1803"/>
+			<enum name="robot_vacuum" value="1803"/>
 			<enum name="run" value="1804"/>
 			<enum name="search_web" value="1805"/>
 			<enum name="shovel" value="1806"/>
@@ -1959,7 +1959,7 @@
 			<enum name="camera_metering_partial" value="1954"/>
 			<enum name="camera_metering_spot" value="1955"/>
 			<enum name="cannabis" value="1956"/>
-			<enum name="car_convertable" value="1957"/>
+			<enum name="car_convertible" value="1957"/>
 			<enum name="car_estate" value="1958"/>
 			<enum name="car_hatchback" value="1959"/>
 			<enum name="car_pickup" value="1960"/>
@@ -2018,7 +2018,7 @@
 			<enum name="mushroom" value="2013"/>
 			<enum name="mushroom_outline" value="2014"/>
 			<enum name="nintendo_switch" value="2015"/>
-			<enum name="null" value="2016"/>
+			<enum name="null_icon" value="2016"/>
 			<enum name="passport" value="2017"/>
 			<enum name="periodic_table_co2" value="2018"/>
 			<enum name="pipe" value="2019"/>
@@ -2048,6 +2048,314 @@
 			<enum name="video_3d" value="2043"/>
 			<enum name="wall" value="2044"/>
 			<enum name="xmpp" value="2045"/>
+			<enum name="account_multiple_plus_outline" value="2046"/>
+			<enum name="account_plus_outline" value="2047"/>
+			<enum name="google_allo" value="2048"/>
+			<enum name="artist" value="2049"/>
+			<enum name="atlassian" value="2050"/>
+			<enum name="azure" value="2051"/>
+			<enum name="basketball" value="2052"/>
+			<enum name="battery_charging_wireless" value="2053"/>
+			<enum name="battery_charging_wireless_10" value="2054"/>
+			<enum name="battery_charging_wireless_20" value="2055"/>
+			<enum name="battery_charging_wireless_30" value="2056"/>
+			<enum name="battery_charging_wireless_40" value="2057"/>
+			<enum name="battery_charging_wireless_50" value="2058"/>
+			<enum name="battery_charging_wireless_60" value="2059"/>
+			<enum name="battery_charging_wireless_70" value="2060"/>
+			<enum name="battery_charging_wireless_80" value="2061"/>
+			<enum name="battery_charging_wireless_90" value="2062"/>
+			<enum name="battery_charging_wireless_alert" value="2063"/>
+			<enum name="battery_charging_wireless_outline" value="2064"/>
+			<enum name="bitcoin" value="2065"/>
+			<enum name="briefcase_outline" value="2066"/>
+			<enum name="cellphone_wireless" value="2067"/>
+			<enum name="clover" value="2068"/>
+			<enum name="comment_question" value="2069"/>
+			<enum name="content_save_outline" value="2070"/>
+			<enum name="delete_restore" value="2071"/>
+			<enum name="door" value="2072"/>
+			<enum name="door_closed" value="2073"/>
+			<enum name="door_open" value="2074"/>
+			<enum name="fan_off" value="2075"/>
+			<enum name="file_percent" value="2076"/>
+			<enum name="finance" value="2077"/>
+			<enum name="flash_circle" value="2078"/>
+			<enum name="floor_plan" value="2079"/>
+			<enum name="forum_outline" value="2080"/>
+			<enum name="golf" value="2081"/>
+			<enum name="google_home" value="2082"/>
+			<enum name="guy_fawkes_mask" value="2083"/>
+			<enum name="home_account" value="2084"/>
+			<enum name="home_heart" value="2085"/>
+			<enum name="hot_tub" value="2086"/>
+			<enum name="hulu" value="2087"/>
+			<enum name="ice_cream" value="2088"/>
+			<enum name="image_off" value="2089"/>
+			<enum name="karate" value="2090"/>
+			<enum name="ladybug" value="2091"/>
+			<enum name="notebook" value="2092"/>
+			<enum name="phone_return" value="2093"/>
+			<enum name="poker_chip" value="2094"/>
+			<enum name="shape" value="2095"/>
+			<enum name="shape_outline" value="2096"/>
+			<enum name="ship_wheel" value="2097"/>
+			<enum name="soccer_field" value="2098"/>
+			<enum name="table_column" value="2099"/>
+			<enum name="table_of_contents" value="2100"/>
+			<enum name="table_row" value="2101"/>
+			<enum name="table_settings" value="2102"/>
+			<enum name="television_box" value="2103"/>
+			<enum name="television_classic_off" value="2104"/>
+			<enum name="television_off" value="2105"/>
+			<enum name="towing" value="2106"/>
+			<enum name="upload_multiple" value="2107"/>
+			<enum name="video_4k_box" value="2108"/>
+			<enum name="video_input_antenna" value="2109"/>
+			<enum name="video_input_component" value="2110"/>
+			<enum name="video_input_hdmi" value="2111"/>
+			<enum name="video_input_svideo" value="2112"/>
+			<enum name="view_dashboard_variant" value="2113"/>
+			<enum name="vuejs" value="2114"/>
+			<enum name="xamarin" value="2115"/>
+			<enum name="xamarin_outline" value="2116"/>
+			<enum name="youtube_creator_studio" value="2117"/>
+			<enum name="youtube_gaming" value="2118"/>
+			<enum name="account_group" value="2119"/>
+			<enum name="accusoft" value="2120"/>
+			<enum name="airport" value="2121"/>
+			<enum name="arrow_collapse_horizontal" value="2122"/>
+			<enum name="arrow_collapse_vertical" value="2123"/>
+			<enum name="arrow_expand_horizontal" value="2124"/>
+			<enum name="arrow_expand_vertical" value="2125"/>
+			<enum name="augmented_reality" value="2126"/>
+			<enum name="badminton" value="2127"/>
+			<enum name="baseball" value="2128"/>
+			<enum name="baseball_bat" value="2129"/>
+			<enum name="bottle_wine" value="2130"/>
+			<enum name="check_outline" value="2131"/>
+			<enum name="checkbox_intermediate" value="2132"/>
+			<enum name="chess_king" value="2133"/>
+			<enum name="chess_knight" value="2134"/>
+			<enum name="chess_pawn" value="2135"/>
+			<enum name="chess_queen" value="2136"/>
+			<enum name="chess_rook" value="2137"/>
+			<enum name="chess_bishop" value="2138"/>
+			<enum name="clipboard_pulse" value="2139"/>
+			<enum name="clipboard_pulse_outline" value="2140"/>
+			<enum name="comment_multiple" value="2141"/>
+			<enum name="comment_text_multiple" value="2142"/>
+			<enum name="comment_text_multiple_outline" value="2143"/>
+			<enum name="crane" value="2144"/>
+			<enum name="curling" value="2145"/>
+			<enum name="currency_bdt" value="2146"/>
+			<enum name="currency_kzt" value="2147"/>
+			<enum name="database_search" value="2148"/>
+			<enum name="dice_d12" value="2149"/>
+			<enum name="docker" value="2150"/>
+			<enum name="doorbell_video" value="2151"/>
+			<enum name="ethereum" value="2152"/>
+			<enum name="eye_plus" value="2153"/>
+			<enum name="eye_plus_outline" value="2154"/>
+			<enum name="eye_settings" value="2155"/>
+			<enum name="eye_settings_outline" value="2156"/>
+			<enum name="file_question" value="2157"/>
+			<enum name="folder_network" value="2158"/>
+			<enum name="function_variant" value="2159"/>
+			<enum name="garage_alert" value="2160"/>
+			<enum name="gauge_empty" value="2161"/>
+			<enum name="gauge_full" value="2162"/>
+			<enum name="gauge_low" value="2163"/>
+			<enum name="glass_wine" value="2164"/>
+			<enum name="graphql" value="2165"/>
+			<enum name="high_definition_box" value="2166"/>
+			<enum name="hockey_puck" value="2167"/>
+			<enum name="hockey_sticks" value="2168"/>
+			<enum name="home_alert" value="2169"/>
+			<enum name="image_plus" value="2170"/>
+			<enum name="jquery" value="2171"/>
+			<enum name="lifebuoy" value="2172"/>
+			<enum name="mixed_reality" value="2173"/>
+			<enum name="nativescript" value="2174"/>
+			<enum name="onepassword" value="2175"/>
+			<enum name="patreon" value="2176"/>
+			<enum name="paypal" value="2177"/>
+			<enum name="peace" value="2178"/>
+			<enum name="phone_rotate_landscape" value="2179"/>
+			<enum name="phone_rotate_portrait" value="2180"/>
+			<enum name="pier" value="2181"/>
+			<enum name="pier_crane" value="2182"/>
+			<enum name="pipe_leak" value="2183"/>
+			<enum name="piston" value="2184"/>
+			<enum name="play_network" value="2185"/>
+			<enum name="reminder" value="2186"/>
+			<enum name="room_service" value="2187"/>
+			<enum name="salesforce" value="2188"/>
+			<enum name="security_account" value="2189"/>
+			<enum name="teach" value="2190"/>
+			<enum name="thermostat_box" value="2191"/>
+			<enum name="tractor" value="2192"/>
+			<enum name="vector_ellipse" value="2193"/>
+			<enum name="virtual_reality" value="2194"/>
+			<enum name="watch_export_variant" value="2195"/>
+			<enum name="watch_import_variant" value="2196"/>
+			<enum name="watch_variant" value="2197"/>
+			<enum name="weather_hurricane" value="2198"/>
+			<enum name="account_heart" value="2199"/>
+			<enum name="alien" value="2200"/>
+			<enum name="anvil" value="2201"/>
+			<enum name="battery_charging_10" value="2202"/>
+			<enum name="battery_charging_50" value="2203"/>
+			<enum name="battery_charging_70" value="2204"/>
+			<enum name="battery_charging_outline" value="2205"/>
+			<enum name="bed_empty" value="2206"/>
+			<enum name="border_all_variant" value="2207"/>
+			<enum name="border_bottom_variant" value="2208"/>
+			<enum name="border_left_variant" value="2209"/>
+			<enum name="border_none_variant" value="2210"/>
+			<enum name="border_right_variant" value="2211"/>
+			<enum name="border_top_variant" value="2212"/>
+			<enum name="calendar_edit" value="2213"/>
+			<enum name="clipboard_check_outline" value="2214"/>
+			<enum name="console_network" value="2215"/>
+			<enum name="file_compare" value="2216"/>
+			<enum name="fire_truck" value="2217"/>
+			<enum name="folder_key" value="2218"/>
+			<enum name="folder_key_network" value="2219"/>
+			<enum name="gpu" value="2220"/>
+			<enum name="home_currency_usd" value="2221"/>
+			<enum name="inbox_multiple" value="2222"/>
+			<enum name="language_lua" value="2223"/>
+			<enum name="lock_smart" value="2224"/>
+			<enum name="microphone_minus" value="2225"/>
+			<enum name="microphone_plus" value="2226"/>
+			<enum name="palette_swatch" value="2227"/>
+			<enum name="periodic_table" value="2228"/>
+			<enum name="pickaxe" value="2229"/>
+			<enum name="qrcode_edit" value="2230"/>
+			<enum name="remote_desktop" value="2231"/>
+			<enum name="sausage" value="2232"/>
+			<enum name="settings_outline" value="2233"/>
+			<enum name="signal_cellular_1" value="2234"/>
+			<enum name="signal_cellular_2" value="2235"/>
+			<enum name="signal_cellular_3" value="2236"/>
+			<enum name="signal_cellular_outline" value="2237"/>
+			<enum name="ssh" value="2238"/>
+			<enum name="swap_horizontal_variant" value="2239"/>
+			<enum name="swap_vertical_variant" value="2240"/>
+			<enum name="tooth" value="2241"/>
+			<enum name="train_variant" value="2242"/>
+			<enum name="account_multiple_check" value="2243"/>
+			<enum name="amazon_alexa" value="2244"/>
+			<enum name="arch" value="2245"/>
+			<enum name="axe" value="2246"/>
+			<enum name="bullseye_arrow" value="2247"/>
+			<enum name="bus_clock" value="2248"/>
+			<enum name="camera_account" value="2249"/>
+			<enum name="camera_image" value="2250"/>
+			<enum name="car_limousine" value="2251"/>
+			<enum name="cards_club" value="2252"/>
+			<enum name="cards_diamond" value="2253"/>
+			<enum name="cards_heart" value="2254"/>
+			<enum name="cards_spade" value="2255"/>
+			<enum name="cellphone_text" value="2256"/>
+			<enum name="cellphone_message" value="2257"/>
+			<enum name="chart_multiline" value="2258"/>
+			<enum name="circle_edit_outline" value="2259"/>
+			<enum name="cogs" value="2260"/>
+			<enum name="credit_card_settings" value="2261"/>
+			<enum name="death_star" value="2262"/>
+			<enum name="death_star_variant" value="2263"/>
+			<enum name="debian" value="2264"/>
+			<enum name="fedora" value="2265"/>
+			<enum name="file_undo" value="2266"/>
+			<enum name="floor_lamp" value="2267"/>
+			<enum name="folder_edit" value="2268"/>
+			<enum name="format_columns" value="2269"/>
+			<enum name="freebsd" value="2270"/>
+			<enum name="gate_and" value="2271"/>
+			<enum name="gate_nand" value="2272"/>
+			<enum name="gate_nor" value="2273"/>
+			<enum name="gate_not" value="2274"/>
+			<enum name="gate_or" value="2275"/>
+			<enum name="gate_xnor" value="2276"/>
+			<enum name="gate_xor" value="2277"/>
+			<enum name="gentoo" value="2278"/>
+			<enum name="globe_model" value="2279"/>
+			<enum name="hammer" value="2280"/>
+			<enum name="home_lock" value="2281"/>
+			<enum name="home_lock_open" value="2282"/>
+			<enum name="linux_mint" value="2283"/>
+			<enum name="lock_alert" value="2284"/>
+			<enum name="lock_question" value="2285"/>
+			<enum name="map_marker_distance" value="2286"/>
+			<enum name="midi" value="2287"/>
+			<enum name="midi_port" value="2288"/>
+			<enum name="nas" value="2289"/>
+			<enum name="network_strength_1" value="2290"/>
+			<enum name="network_strength_1_alert" value="2291"/>
+			<enum name="network_strength_2" value="2292"/>
+			<enum name="network_strength_2_alert" value="2293"/>
+			<enum name="network_strength_3" value="2294"/>
+			<enum name="network_strength_3_alert" value="2295"/>
+			<enum name="network_strength_4" value="2296"/>
+			<enum name="network_strength_4_alert" value="2297"/>
+			<enum name="network_strength_off" value="2298"/>
+			<enum name="network_strength_off_outline" value="2299"/>
+			<enum name="network_strength_outline" value="2300"/>
+			<enum name="play_speed" value="2301"/>
+			<enum name="playlist_edit" value="2302"/>
+			<enum name="power_cycle" value="2303"/>
+			<enum name="power_off" value="2304"/>
+			<enum name="power_on" value="2305"/>
+			<enum name="power_sleep" value="2306"/>
+			<enum name="power_socket_au" value="2307"/>
+			<enum name="power_standby" value="2308"/>
+			<enum name="rabbit" value="2309"/>
+			<enum name="robot_vacuum_variant" value="2310"/>
+			<enum name="satellite_uplink" value="2311"/>
+			<enum name="scanner_off" value="2312"/>
+			<enum name="slackware" value="2313"/>
+			<enum name="square_edit_outline" value="2314"/>
+			<enum name="steam_box" value="2315"/>
+			<enum name="steering_off" value="2316"/>
+			<enum name="table_search" value="2317"/>
+			<enum name="tag_minus" value="2318"/>
+			<enum name="test_tube_empty" value="2319"/>
+			<enum name="test_tube_off" value="2320"/>
+			<enum name="ticket_outline" value="2321"/>
+			<enum name="track_light" value="2322"/>
+			<enum name="transition" value="2323"/>
+			<enum name="transition_masked" value="2324"/>
+			<enum name="tumble_dryer" value="2325"/>
+			<enum name="tumblr_box" value="2326"/>
+			<enum name="video_account" value="2327"/>
+			<enum name="video_image" value="2328"/>
+			<enum name="video_stabilization" value="2329"/>
+			<enum name="wall_sconce" value="2330"/>
+			<enum name="wall_sconce_flat" value="2331"/>
+			<enum name="wall_sconce_variant" value="2332"/>
+			<enum name="wifi_strength_1" value="2333"/>
+			<enum name="wifi_strength_1_alert" value="2334"/>
+			<enum name="wifi_strength_1_lock" value="2335"/>
+			<enum name="wifi_strength_2" value="2336"/>
+			<enum name="wifi_strength_2_alert" value="2337"/>
+			<enum name="wifi_strength_2_lock" value="2338"/>
+			<enum name="wifi_strength_3" value="2339"/>
+			<enum name="wifi_strength_3_alert" value="2340"/>
+			<enum name="wifi_strength_3_lock" value="2341"/>
+			<enum name="wifi_strength_4" value="2342"/>
+			<enum name="wifi_strength_4_alert" value="2343"/>
+			<enum name="wifi_strength_4_lock" value="2344"/>
+			<enum name="wifi_strength_alert_outline" value="2345"/>
+			<enum name="wifi_strength_lock_outline" value="2346"/>
+			<enum name="wifi_strength_off" value="2347"/>
+			<enum name="wifi_strength_off_outline" value="2348"/>
+			<enum name="wifi_strength_outline" value="2349"/>
+			<enum name="pin_off_outline" value="2350"/>
+			<enum name="pin_outline" value="2351"/>
+			<enum name="share_outline" value="2352"/>
+			<enum name="trackpad_lock" value="2353"/>
 
         </attr>
     </declare-styleable>

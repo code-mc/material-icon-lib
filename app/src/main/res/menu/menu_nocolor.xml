@@ -8,7 +8,7 @@
 
     <item app:showAsAction="always" app:materialIcon="dots_vertical" android:title="But wait...">
         <menu>
-            <item app:showAsAction="always" android:title="This" app:materialIcon="youtube_play"/>
+            <item app:showAsAction="always" android:title="This" app:materialIcon="youtube"/>
             <item app:showAsAction="always" android:title="material" app:materialIcon="apple"/>
             <item app:showAsAction="always" android:title="menu" app:materialIcon="microsoft"/>
             <item app:showAsAction="always" android:title="thing" app:materialIcon="android"/>

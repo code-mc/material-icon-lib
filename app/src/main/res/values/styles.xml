@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
-        <item name="materialIconColor">#af09b9</item>
+        <item name="materialIconColor">@color/resourcecolor</item>
     </style>
 
     <!-- Base application theme. -->
@@ -13,4 +13,5 @@
     </style>
 
     <color name="somecolor">#00a</color>
+    <color name="resourcecolor">#f00</color>
 </resources>

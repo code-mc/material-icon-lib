@@ -94,10 +94,10 @@
         android:layout_width="match_parent"
         android:layout_height="96dp"
         app:materialIcon="file"
-        app:materialIconColor="#3300FF00"
+        app:materialIconColor="?attr/materialIconColor"
 
         android:id="@+id/file_icon"
-        android:background="#A0C"
+        android:background="@color/somecolor"
         />
 
     <GridView
