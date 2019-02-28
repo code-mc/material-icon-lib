@@ -16,7 +16,7 @@ public class MaterialIconView extends ImageView {
 
     private MaterialDrawableBuilder mBuilder;
     private Drawable mDrawable;
-    private MaterialDrawableBuilder.IconValue mIcon;
+    private Integer mIcon;
     private int mOverruledSize = -1;
 
     private static final int ACTIONBAR_HEIGHT_DP = 24;
@@ -100,11 +100,8 @@ public class MaterialIconView extends ImageView {
         array.recycle();
     }
 
-    private void setIcon(int iconIndex){
-        setIcon(MaterialDrawableBuilder.IconValue.values()[iconIndex]);
-}
 
-    public void setIcon(MaterialDrawableBuilder.IconValue iconValue){
+    public void setIcon(Integer iconValue) {
         mIcon = iconValue;
         mBuilder.setIcon(iconValue);
         regenerateDrawable();

@@ -140,7 +140,7 @@ public class MaterialMenuInflater {
             if(d.itemIconResId >= 0)
                 m.setIcon(
                         MaterialDrawableBuilder.with(mContext)
-                                .setIcon(MaterialDrawableBuilder.IconValue.values()[d.itemIconResId])
+                                .setIcon(d.itemIconResId)
                                 .setColor(d.itemColor != -1 ? d.itemColor : defaultIconColor)
                                 .setToActionbarSize()
                                 .build()

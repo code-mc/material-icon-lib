@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.GridView;
 
+import net.steamcrafted.materialiconlib.IconValue;
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 import net.steamcrafted.materialiconlib.MaterialIconView;
 import net.steamcrafted.materialiconlib.MaterialMenuInflater;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mListview = (GridView) findViewById(R.id.listview);
-        List<MaterialDrawableBuilder.IconValue> vals = Arrays.asList(MaterialDrawableBuilder.IconValue.values());
+        List<Integer> vals = Arrays.asList(IconValue.values());
 
         ImageAdapter adapt = new ImageAdapter(vals);
         mListview.setAdapter(adapt);
