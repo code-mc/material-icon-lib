@@ -4,16 +4,15 @@ apply plugin: 'com.android.library'
 ext {
     PUBLISH_GROUP_ID = 'net.steamcrafted'
     PUBLISH_ARTIFACT_ID = 'materialiconlib'
-    PUBLISH_VERSION = '1.1.5'
+    PUBLISH_VERSION = '1.1.6'
 }
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '25.0.3'
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 4
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
