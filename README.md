@@ -1,18 +1,22 @@
 # Material Icon Library
 
-A library containing over 2000 material vector icons that can be easily used as Drawable, a standalone View or inside menu resource files. Tired of having to search for and generate png resources every time you want to test something? This library puts an end to that burden and makes swapping icons a breeze, check out the usage below and you'll see why.
+A library containing over 3000 material vector icons that can be easily used as Drawable, a standalone View or inside menu resource files. Tired of having to search for and generate png resources every time you want to test something? This library puts an end to that burden and makes swapping icons a breeze, check out the usage below and you'll see why.
 
 # Demo
 
 ![](http://i.imgur.com/KXHfXo8.gif)
 
+# Fork (2019/02/28)
+ - update project structure (gradle/sdk 28/)
+ - version bump to v3.4.93 , 3558 icons
+
 # Stats
 
  - MinSdk 4
  - LIVE previews and code completion in the Android Studio Designer (Does NOT work out of the box, see step 0 below!)
- - Currently contains 2354 icons, you can look at them here: https://materialdesignicons.com
+ - Currently contains 3558 icons, you can look at them here: https://materialdesignicons.com
  - Configured in less than a minute
- - Adds about 257kb to your apk (so a whopping average of __109 bytes per icon__)
+ - Adds about 519kb to your apk (so a whopping average of __150 bytes per icon__)
  - Includes a custom Drawable, IconView and a MenuInflater for all different icon use cases
 
 # Usage
