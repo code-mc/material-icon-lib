@@ -38,7 +38,7 @@ public class SetBoundsTest extends View {
     }
 
     private void init(final AttributeSet attrs, final int defStyle) {
-        mDrawable = MaterialDrawableBuilder.with(getContext())
+        mDrawable = MaterialDrawableBuilder.Companion.with(getContext())
                 .setIcon(IconValue.RESISTOR_NODES)
                     .setColor(Color.RED)
                     .setSizeDp(1)

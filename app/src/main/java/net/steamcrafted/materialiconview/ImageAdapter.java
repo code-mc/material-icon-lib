@@ -54,7 +54,7 @@ public class ImageAdapter extends BaseAdapter {
         ImageView v = (ImageView) host.getChildAt(0);
         TextView tv = (TextView)  host.getChildAt(1);
         v.setImageDrawable(
-                MaterialDrawableBuilder.with(viewGroup.getContext())
+                MaterialDrawableBuilder.Companion.with(viewGroup.getContext())
                     .setIcon(icons.get(i))
                     .setColor(Color.BLACK)
                     .setSizePx(viewGroup.getWidth() / 5)
