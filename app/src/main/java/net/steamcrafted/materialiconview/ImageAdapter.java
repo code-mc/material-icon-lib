@@ -23,9 +23,9 @@ import java.util.List;
  */
 public class ImageAdapter extends BaseAdapter {
 
-    List<MaterialDrawableBuilder.IconValue> icons;
+    List<Integer> icons;
 
-    public ImageAdapter(@NonNull List<MaterialDrawableBuilder.IconValue> iconin){
+    public ImageAdapter(@NonNull List<Integer> iconin) {
         this.icons = iconin;
     }
 
@@ -54,13 +54,13 @@ public class ImageAdapter extends BaseAdapter {
         ImageView v = (ImageView) host.getChildAt(0);
         TextView tv = (TextView)  host.getChildAt(1);
         v.setImageDrawable(
-                MaterialDrawableBuilder.with(viewGroup.getContext())
+                MaterialDrawableBuilder.Companion.with(viewGroup.getContext())
                     .setIcon(icons.get(i))
                     .setColor(Color.BLACK)
                     .setSizePx(viewGroup.getWidth() / 5)
                     .build()
         );
-        tv.setText(icons.get(i).name());
+        tv.setText(String.valueOf(icons.get(i)));
         return view;
     }
 }

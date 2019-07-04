@@ -1,18 +1,34 @@
 # Material Icon Library
 
-A library containing over 2000 material vector icons that can be easily used as Drawable, a standalone View or inside menu resource files. Tired of having to search for and generate png resources every time you want to test something? This library puts an end to that burden and makes swapping icons a breeze, check out the usage below and you'll see why.
+A library containing over 3000 material vector icons that can be easily used as Drawable, a standalone View or inside menu resource files. Tired of having to search for and generate png resources every time you want to test something? This library puts an end to that burden and makes swapping icons a breeze, check out the usage below and you'll see why.
 
 # Demo
 
 ![](http://i.imgur.com/KXHfXo8.gif)
 
+# Fork (2019/02/28)
+ - update project structure (gradle/sdk 28/)
+ - 更新项目结构,gradle和sdk等配置
+ 
+ - version bump to v3.4.93 , 3558 icons
+ - 图标版本更新至v3.4.93
+ 
+ - cover IconValue from enum to class, because there are to many icon and cause javac "Code too large" (64kb limit).parse.py file has been modified.
+ - IconValue已经从枚举改为包含静态常量的类，因为太多图片导致使用emun时Javac会报告“代码太长”无法编译的问题(单个方法不能超过64kb)。parse.py也被修改生成public static final int name=value;
+ 
+ - small bug: MaterialDrawableBuilder's member icon's type has changed from IconValue to Ingeger,but don't use setIcon(a number) like setIcon(2848) , keep use setIcon(IconValue.xxx).Because there is an index error after 2847.
+ - 小Bug：MaterialDrawableBuilder的icon成员变量类型已经从IconValue改为了Integer，但是别直接使用setIcon(数字)这种写法，保持使用setIcon(IconValue.xxx)这种写法，因为从2847往后图标的index发生了一次偏移。
+ 
+ - about the bug fix,see:MaterialDrawableBuilder.java:78
+ - 关于这个小bug，可见代码MaterialDrawableBuilder.java:78
+
 # Stats
 
  - MinSdk 4
  - LIVE previews and code completion in the Android Studio Designer (Does NOT work out of the box, see step 0 below!)
- - Currently contains 2354 icons, you can look at them here: https://materialdesignicons.com
+ - Currently contains 3558 icons, you can look at them here: https://materialdesignicons.com
  - Configured in less than a minute
- - Adds about 257kb to your apk (so a whopping average of __109 bytes per icon__)
+ - Adds about 351.6kb to your apk (so a whopping average of __101 bytes per icon__)
  - Includes a custom Drawable, IconView and a MenuInflater for all different icon use cases
 
 # Usage

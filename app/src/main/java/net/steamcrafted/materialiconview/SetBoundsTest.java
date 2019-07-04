@@ -11,6 +11,7 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
 
+import net.steamcrafted.materialiconlib.IconValue;
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 
 /**
@@ -37,8 +38,8 @@ public class SetBoundsTest extends View {
     }
 
     private void init(final AttributeSet attrs, final int defStyle) {
-        mDrawable = MaterialDrawableBuilder.with(getContext())
-                    .setIcon(MaterialDrawableBuilder.IconValue.NUMERIC_7_BOX)
+        mDrawable = MaterialDrawableBuilder.Companion.with(getContext())
+                .setIcon(IconValue.RESISTOR_NODES)
                     .setColor(Color.RED)
                     .setSizeDp(1)
                 .build();
