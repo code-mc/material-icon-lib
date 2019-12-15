@@ -121,5 +121,6 @@
     <orderEntry type="library" name="Gradle: androidx.interpolator:interpolator:1.0.0@aar" level="project" />
     <orderEntry type="module" module-name="materialiconlib" />
     <orderEntry type="module" module-name="materialiconlib" />
+    <orderEntry type="module" module-name="materialiconlib" />
   </component>
 </module>
