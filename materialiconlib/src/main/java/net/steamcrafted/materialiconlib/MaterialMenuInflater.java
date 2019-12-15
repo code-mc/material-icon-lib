@@ -21,14 +21,21 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MaterialMenuInflater {
-    /** Menu tag name in XML. */
+public class MaterialMenuInflater
+{
+    /**
+     * Menu tag name in XML.
+     */
     private static final String XML_MENU = "menu";
 
-    /** Group tag name in XML. */
+    /**
+     * Group tag name in XML.
+     */
     private static final String XML_GROUP = "group";
 
-    /** Item tag name in XML. */
+    /**
+     * Item tag name in XML.
+     */
     private static final String XML_ITEM = "item";
 
     private final Context mContext;
@@ -40,31 +47,38 @@ public class MaterialMenuInflater {
      *
      * @see Activity#getMenuInflater()
      */
-    private MaterialMenuInflater(Context context, MenuInflater inflater) {
+    private MaterialMenuInflater(Context context, MenuInflater inflater)
+    {
         mContext = context;
         mInflater = inflater;
         mDefaultColor = getDefaultColor();
+        // Instantiate so hashmap is filled up
+        new MaterialIconValues(context);
     }
 
-    public static MaterialMenuInflater with(Context context){
+    public static MaterialMenuInflater with(Context context)
+    {
         return new MaterialMenuInflater(
                 context,
                 context instanceof Activity ?
-                        ((Activity)context).getMenuInflater()
+                        ((Activity) context).getMenuInflater()
                         : new MenuInflater(context)
         );
     }
 
-    public static MaterialMenuInflater with(Context context, MenuInflater inflater){
+    public static MaterialMenuInflater with(Context context, MenuInflater inflater)
+    {
         return new MaterialMenuInflater(context, inflater);
     }
 
-    public MaterialMenuInflater setDefaultColor(int color){
+    public MaterialMenuInflater setDefaultColor(int color)
+    {
         mDefaultColor = color;
         return this;
     }
 
-    public MaterialMenuInflater setDefaultColorResource(int colorRes){
+    public MaterialMenuInflater setDefaultColorResource(int colorRes)
+    {
         mDefaultColor = MaterialIconUtils.getColorResource(mContext, colorRes);
         return this;
     }
@@ -74,11 +88,12 @@ public class MaterialMenuInflater {
      * {@link InflateException} if there is an error.
      *
      * @param menuRes Resource ID for an XML layout resource to load (e.g.,
-     *            <code>R.menu.main_activity)</code>)
-     * @param menu The Menu to inflate into. The items and submenus will be
-     *            added to this Menu.
+     *                <code>R.menu.main_activity)</code>)
+     * @param menu    The Menu to inflate into. The items and submenus will be
+     *                added to this Menu.
      */
-    public void inflate(int menuRes, Menu menu) {
+    public void inflate(int menuRes, Menu menu)
+    {
         menu.clear();
 
         mInflater.inflate(menuRes, menu);
@@ -86,19 +101,24 @@ public class MaterialMenuInflater {
         afterInflate(menuRes, menu);
     }
 
-    private void afterInflate(int menuRes, Menu menu){
+    private void afterInflate(int menuRes, Menu menu)
+    {
         IconData root = new IconData(0, 0, 0);
         XmlResourceParser parser = null;
-        try {
+        try
+        {
             parser = mContext.getResources().getLayout(menuRes);
             AttributeSet attrs = Xml.asAttributeSet(parser);
 
             parseMenu(parser, attrs, root);
-        } catch (XmlPullParserException e) {
+        } catch (XmlPullParserException e)
+        {
             throw new InflateException("Error inflating menu XML", e);
-        } catch (IOException e) {
+        } catch (IOException e)
+        {
             throw new InflateException("Error inflating menu XML", e);
-        } finally {
+        } finally
+        {
             if (parser != null) parser.close();
 
             // populate the menu with the parsed icons
@@ -106,41 +126,49 @@ public class MaterialMenuInflater {
         }
     }
 
-    private int getDefaultColor(){
+    private int getDefaultColor()
+    {
         TypedValue outValue = new TypedValue();
         mContext.getTheme().resolveAttribute(R.attr.materialIconColor, outValue, true);
 
         // Colorstatelist/color resource
-        if(outValue.resourceId != 0 && outValue.type == TypedValue.TYPE_ATTRIBUTE){
+        if (outValue.resourceId != 0 && outValue.type == TypedValue.TYPE_ATTRIBUTE)
+        {
             ColorStateList stateList = null;
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M)
+            {
                 stateList = mContext.getResources().getColorStateList(outValue.resourceId, mContext.getTheme());
-            }else{
+            } else
+            {
                 stateList = mContext.getResources().getColorStateList(outValue.resourceId);
             }
-            if(stateList != null) return stateList.getDefaultColor();
+            if (stateList != null) return stateList.getDefaultColor();
         }
 
         // Regular inline color int
-        if(outValue.type <= TypedValue.TYPE_LAST_COLOR_INT && outValue.type >= TypedValue.TYPE_FIRST_COLOR_INT){
+        if (outValue.type <= TypedValue.TYPE_LAST_COLOR_INT && outValue.type >= TypedValue.TYPE_FIRST_COLOR_INT)
+        {
             return outValue.data;
         }
         return Color.BLACK;
     }
 
-    private void populateIcons(Menu menu, IconData root, int defaultIconColor) {
-        for(int i = 0; i < menu.size(); i++){
+    private void populateIcons(Menu menu, IconData root, int defaultIconColor)
+    {
+        for (int i = 0; i < menu.size(); i++)
+        {
             MenuItem m = menu.getItem(i);
             IconData d = root.children.get(i);
 
-            if(m.hasSubMenu()){
+            if (m.hasSubMenu())
+            {
                 populateIcons(m.getSubMenu(), d, defaultIconColor);
             }
 
-            if(d.itemIconResId >= 0)
+            if (d.itemIconResId >= 0)
                 m.setIcon(
                         MaterialDrawableBuilder.with(mContext)
-                                .setIcon(MaterialDrawableBuilder.IconValue.values()[d.itemIconResId])
+                                .setIcon(d.itemIconResId)
                                 .setColor(d.itemColor != -1 ? d.itemColor : defaultIconColor)
                                 .setToActionbarSize()
                                 .build()
@@ -153,7 +181,8 @@ public class MaterialMenuInflater {
      * call this recursively.
      */
     private void parseMenu(XmlPullParser parser, AttributeSet attrs, IconData menu)
-            throws XmlPullParserException, IOException {
+            throws XmlPullParserException, IOException
+    {
         MenuState menuState = new MenuState(menu);
 
         int eventType = parser.getEventType();
@@ -162,10 +191,13 @@ public class MaterialMenuInflater {
         String unknownTagName = null;
 
         // This loop will skip to the menu start tag
-        do {
-            if (eventType == XmlPullParser.START_TAG) {
+        do
+        {
+            if (eventType == XmlPullParser.START_TAG)
+            {
                 tagName = parser.getName();
-                if (tagName.equals(XML_MENU)) {
+                if (tagName.equals(XML_MENU))
+                {
                     // Go to next tag
                     eventType = parser.next();
                     break;
@@ -177,25 +209,32 @@ public class MaterialMenuInflater {
         } while (eventType != XmlPullParser.END_DOCUMENT);
 
         boolean reachedEndOfMenu = false;
-        while (!reachedEndOfMenu) {
-            switch (eventType) {
+        while (!reachedEndOfMenu)
+        {
+            switch (eventType)
+            {
                 case XmlPullParser.START_TAG:
-                    if (lookingForEndOfUnknownTag) {
+                    if (lookingForEndOfUnknownTag)
+                    {
                         break;
                     }
 
                     tagName = parser.getName();
-                    if (tagName.equals(XML_GROUP)) {
+                    if (tagName.equals(XML_GROUP))
+                    {
                         menuState.readGroup(attrs);
-                    } else if (tagName.equals(XML_ITEM)) {
+                    } else if (tagName.equals(XML_ITEM))
+                    {
                         menuState.readItem(attrs);
-                    } else if (tagName.equals(XML_MENU)) {
+                    } else if (tagName.equals(XML_MENU))
+                    {
                         // A menu start tag denotes a submenu for an item
                         IconData subMenu = menuState.addSubMenuItem();
 
                         // Parse the submenu into returned SubMenu
                         parseMenu(parser, attrs, subMenu);
-                    } else {
+                    } else
+                    {
                         lookingForEndOfUnknownTag = true;
                         unknownTagName = tagName;
                     }
@@ -203,18 +242,23 @@ public class MaterialMenuInflater {
 
                 case XmlPullParser.END_TAG:
                     tagName = parser.getName();
-                    if (lookingForEndOfUnknownTag && tagName.equals(unknownTagName)) {
+                    if (lookingForEndOfUnknownTag && tagName.equals(unknownTagName))
+                    {
                         lookingForEndOfUnknownTag = false;
                         unknownTagName = null;
-                    } else if (tagName.equals(XML_GROUP)) {
+                    } else if (tagName.equals(XML_GROUP))
+                    {
                         menuState.resetGroup();
-                    } else if (tagName.equals(XML_ITEM)) {
+                    } else if (tagName.equals(XML_ITEM))
+                    {
                         // Add the item if it hasn't been added (if the item was
                         // a submenu, it would have been added already)
-                        if (!menuState.hasAddedItem()) {
+                        if (!menuState.hasAddedItem())
+                        {
                             menuState.addItem();
                         }
-                    } else if (tagName.equals(XML_MENU)) {
+                    } else if (tagName.equals(XML_MENU))
+                    {
                         reachedEndOfMenu = true;
                     }
                     break;
@@ -227,13 +271,15 @@ public class MaterialMenuInflater {
         }
     }
 
-    private class IconData {
+    private class IconData
+    {
         public int itemIconResId;
         public int itemColor;
         public int categoryOrder;
         public List<IconData> children = new ArrayList<>();
 
-        public IconData(int itemIconResId, int itemColor, int categoryOrder) {
+        public IconData(int itemIconResId, int itemColor, int categoryOrder)
+        {
             this.itemIconResId = itemIconResId;
             this.itemColor = itemColor;
             this.categoryOrder = categoryOrder;
@@ -246,7 +292,8 @@ public class MaterialMenuInflater {
      * Groups can not be nested unless there is another menu (which will have
      * its state class).
      */
-    private class MenuState {
+    private class MenuState
+    {
 
         /**
          * This is the part of an order integer that the user can provide.
@@ -296,13 +343,15 @@ public class MaterialMenuInflater {
 
         private IconData menu;
 
-        public MenuState(IconData menu) {
+        public MenuState(IconData menu)
+        {
             this.menu = menu;
 
             resetGroup();
         }
 
-        public void resetGroup() {
+        public void resetGroup()
+        {
             groupCategory = defaultItemCategory;
             groupOrder = defaultItemOrder;
         }
@@ -310,7 +359,8 @@ public class MaterialMenuInflater {
         /**
          * Called when the parser is pointing to a group tag.
          */
-        public void readGroup(AttributeSet attrs) {
+        public void readGroup(AttributeSet attrs)
+        {
             TypedArray a = mContext.obtainStyledAttributes(attrs,
                     net.steamcrafted.materialiconlib.R.styleable.MaterialMenuGroup);
 
@@ -323,7 +373,8 @@ public class MaterialMenuInflater {
         /**
          * Called when the parser is pointing to an item tag.
          */
-        public void readItem(AttributeSet attrs) {
+        public void readItem(AttributeSet attrs)
+        {
             TypedArray a = mContext.getApplicationContext().obtainStyledAttributes(attrs,
                     net.steamcrafted.materialiconlib.R.styleable.MaterialIconViewFormat);
 
@@ -345,7 +396,8 @@ public class MaterialMenuInflater {
             itemAdded = false;
         }
 
-        public IconData addItem() {
+        public IconData addItem()
+        {
             itemAdded = true;
 
             final int ordering = getOrdering(categoryOrder);
@@ -357,11 +409,13 @@ public class MaterialMenuInflater {
             return item;
         }
 
-        public IconData addSubMenuItem() {
+        public IconData addSubMenuItem()
+        {
             return addItem();
         }
 
-        public boolean hasAddedItem() {
+        public boolean hasAddedItem()
+        {
             return itemAdded;
         }
 
@@ -371,15 +425,17 @@ public class MaterialMenuInflater {
          * categories, and combine it with the lower bits.
          *
          * @param categoryOrder The category order for a particular item (if it has
-         *            not been or/add with a category, the default category is
-         *            assumed).
+         *                      not been or/add with a category, the default category is
+         *                      assumed).
          * @return An ordering integer that can be used to order this item across
-         *         all the items (even from other categories).
+         * all the items (even from other categories).
          */
-        private int getOrdering(int categoryOrder) {
+        private int getOrdering(int categoryOrder)
+        {
             final int index = (categoryOrder & CATEGORY_MASK) >> CATEGORY_SHIFT;
 
-            if (index < 0 || index >= sCategoryToOrder.length) {
+            if (index < 0 || index >= sCategoryToOrder.length)
+            {
                 throw new IllegalArgumentException("order does not contain a valid category.");
             }
 
@@ -387,10 +443,13 @@ public class MaterialMenuInflater {
         }
 
 
-        private int findInsertIndex(List<IconData> items, int ordering) {
-            for (int i = items.size() - 1; i >= 0; i--) {
+        private int findInsertIndex(List<IconData> items, int ordering)
+        {
+            for (int i = items.size() - 1; i >= 0; i--)
+            {
                 IconData item = items.get(i);
-                if (item.categoryOrder <= ordering) {
+                if (item.categoryOrder <= ordering)
+                {
                     return i + 1;
                 }
             }

@@ -2,41 +2,47 @@ package net.steamcrafted.materialiconview;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.SupportMenuInflater;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.GridView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.SupportMenuInflater;
+import androidx.appcompat.widget.Toolbar;
+
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
+import net.steamcrafted.materialiconlib.MaterialIconValues;
 import net.steamcrafted.materialiconlib.MaterialIconView;
 import net.steamcrafted.materialiconlib.MaterialMenuInflater;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
 
     MaterialIconView mIcon;
     GridView mListview;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
 
         setContentView(R.layout.activity_main);
 
         mListview = (GridView) findViewById(R.id.listview);
-        List<MaterialDrawableBuilder.IconValue> vals = Arrays.asList(MaterialDrawableBuilder.IconValue.values());
+        //List<MaterialDrawableBuilder.IconValue> vals = Arrays.asList(MaterialDrawableBuilder.IconValue.values());
 
-        ImageAdapter adapt = new ImageAdapter(vals);
+        ImageAdapter adapt = new ImageAdapter(new MaterialIconValues(this));
         mListview.setAdapter(adapt);
 
         final Toolbar toolbar1 = (Toolbar) findViewById(R.id.toolbar_1);
         MaterialMenuInflater.with(toolbar1.getContext(), new SupportMenuInflater(toolbar1.getContext()))
                 .inflate(R.menu.menu_nocolor, toolbar1.getMenu());
 
+        final MaterialIconView miv = (MaterialIconView) findViewById(R.id.file_icon);
+        miv.setIcon("file_account");
 
         // Activity Theme materialIconColor attribute (lowest priority default color)
         // View specific Theme e.g. app:theme="..."   (2nd lowest in priority)
@@ -76,7 +82,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         MaterialMenuInflater.with(this).inflate(R.menu.menu_main, menu);
         return true;
     }
