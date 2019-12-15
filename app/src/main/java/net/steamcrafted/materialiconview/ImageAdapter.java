@@ -1,7 +1,9 @@
 package net.steamcrafted.materialiconview;
 
 import android.graphics.Color;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 import net.steamcrafted.materialiconlib.MaterialIconUtils;
+import net.steamcrafted.materialiconlib.MaterialIconValues;
 import net.steamcrafted.materialiconlib.MaterialIconView;
 
 import java.util.List;
@@ -21,46 +24,53 @@ import java.util.List;
 /**
  * Created by Wannes2 on 21/07/2015.
  */
-public class ImageAdapter extends BaseAdapter {
+public class ImageAdapter extends BaseAdapter
+{
 
-    List<MaterialDrawableBuilder.IconValue> icons;
+    MaterialIconValues icons;
 
-    public ImageAdapter(@NonNull List<MaterialDrawableBuilder.IconValue> iconin){
+    public ImageAdapter(@NonNull MaterialIconValues iconin)
+    {
         this.icons = iconin;
     }
 
     @Override
-    public int getCount() {
+    public int getCount()
+    {
         return icons.size();
     }
 
     @Override
-    public Object getItem(int i) {
+    public Object getItem(int i)
+    {
         return icons.get(i);
     }
 
     @Override
-    public long getItemId(int i) {
+    public long getItemId(int i)
+    {
         return i;
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        if(view == null){
+    public View getView(int i, View view, ViewGroup viewGroup)
+    {
+        if (view == null)
+        {
             view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.image_list_item, null, false);
             view.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.WRAP_CONTENT, AbsListView.LayoutParams.WRAP_CONTENT));
         }
         FrameLayout host = (FrameLayout) view;
         ImageView v = (ImageView) host.getChildAt(0);
-        TextView tv = (TextView)  host.getChildAt(1);
+        TextView tv = (TextView) host.getChildAt(1);
         v.setImageDrawable(
                 MaterialDrawableBuilder.with(viewGroup.getContext())
-                    .setIcon(icons.get(i))
-                    .setColor(Color.BLACK)
-                    .setSizePx(viewGroup.getWidth() / 5)
-                    .build()
+                        .setIcon(icons.get(i))
+                        .setColor(Color.BLACK)
+                        .setSizePx(viewGroup.getWidth() / 5)
+                        .build()
         );
-        tv.setText(icons.get(i).name());
+        tv.setText(icons.getName(i));
         return view;
     }
 }

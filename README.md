@@ -2,6 +2,8 @@
 
 A library containing over 2000 material vector icons that can be easily used as Drawable, a standalone View or inside menu resource files. Tired of having to search for and generate png resources every time you want to test something? This library puts an end to that burden and makes swapping icons a breeze, check out the usage below and you'll see why.
 
+# Icon Library version: 4.7.95
+
 # Demo
 
 ![](http://i.imgur.com/KXHfXo8.gif)
