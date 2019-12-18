@@ -38,7 +38,7 @@ public class SetBoundsTest extends View {
 
     private void init(final AttributeSet attrs, final int defStyle) {
         mDrawable = MaterialDrawableBuilder.with(getContext())
-                    .setIcon(MaterialDrawableBuilder.IconValue.NUMERIC_7_BOX)
+                    .setIconByName("file")
                     .setColor(Color.RED)
                     .setSizeDp(1)
                 .build();

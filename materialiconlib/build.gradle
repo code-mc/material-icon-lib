@@ -4,15 +4,15 @@ apply plugin: 'com.android.library'
 ext {
     PUBLISH_GROUP_ID = 'net.steamcrafted'
     PUBLISH_ARTIFACT_ID = 'materialiconlib'
-    PUBLISH_VERSION = '1.1.5'
+    PUBLISH_VERSION = '1.1.5GP'
 }
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '25.0.3'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
 
     defaultConfig {
-        minSdkVersion 4
+        minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -29,4 +29,9 @@ android {
 
 }
 
-apply from: 'https://raw.githubusercontent.com/ArthurHub/release-android-library/master/android-release-aar.gradle'
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.annotation:annotation:1.0.2'
+}
+
+//apply from: 'https://raw.githubusercontent.com/ArthurHub/release-android-library/master/android-release-aar.gradle'
